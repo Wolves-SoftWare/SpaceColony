@@ -1,6 +1,6 @@
 {
   "name": "spacefleet",
-  "version": "1.0.0",
+  "version": "Prototype 0.0.1",
   "description": "A game space",
   "main": "main.js",
   "bin": "main.js",
