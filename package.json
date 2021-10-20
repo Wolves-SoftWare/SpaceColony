@@ -1,0 +1,34 @@
+{
+  "name": "spacefleet",
+  "version": "1.0.0",
+  "description": "A game space",
+  "main": "main.js",
+  "bin": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"pkg ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wolves-SoftWare/SpaceFleet.git"
+  },
+  "pkg": {
+    "assets": [
+        "src/controler/**",
+        "src/events/**/**",
+        "src/Utils/**"
+    ],
+    "targets":["node12-win-x64"],
+    "outputPath": "dist"
+},
+  "author": "zechaos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wolves-SoftWare/SpaceFleet/issues"
+  },
+  "homepage": "https://github.com/Wolves-SoftWare/SpaceFleet#readme",
+  "dependencies": {
+    "@discordjs/collection": "^0.2.1",
+    "terminal-menu": "^2.1.1"
+  }
+}
