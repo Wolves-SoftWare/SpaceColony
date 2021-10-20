@@ -1,2 +1,2 @@
-# SpaceFleet without fleet 
-A game space
+#SpaceColony 
+A game space colony manager
