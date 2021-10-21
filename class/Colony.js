@@ -3,7 +3,7 @@ class Colony {
     this.colonyData = require('../data/game/game.json')
   }
 
-  get colony() {
+  get callColony() {
     return this.colonyData
   }
 }

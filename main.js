@@ -6,4 +6,6 @@ global.Collection = Collection
 
 const Game = require('./src/class/Game')
 const game = new Game()
-game.run()
+require('./src/class/eventLoader')(game)
+
+game.startGame()

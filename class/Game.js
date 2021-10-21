@@ -1,52 +1,55 @@
+const EventLoader = require("./eventLoader");
+const EventEmitter = require('events')
 const stdout = process.stdout
 const stdin = process.stdin
 const stderr = process.stderr
 const rdl = require("readline")
-const EventEmitter = require('events')
+const fs = require("fs");
+const Colony = require('./Colony')
+const Many = require('extends-classes');
+
+class Game extends EventEmitter{
+  constructor() {
+    super()
+
+    this.colony = new Colony()
 
 
-class Select extends EventEmitter {
-  /**
-   *
-   * @param opts.question {String}
-   * @param opts.options {Array<String>}
-   */
-  constructor(opts = {
-    question: "",
-    options: [],
-    pointer: ">",
-    color: "blue"
-  }) {
-    super();
-    let { question, options, pointer, color } = opts
     this.answers =[]
-    this.question = question
-    this.options = options
-
-
-    this.pointer = pointer
-    this._color = color
+    this.question
+    this.options
+    this.pointer = ">"
+    this._color = "blue"
     this.input
-    require('../Utils/eventList')(this)
     this.cursorLocs = {
       x: 0,
       y: 0
     }
   }
 
+  async startGame(){
+    this.events = await EventLoader();
+    [...this.events.values()].map((event) => {
+      this.on(event.name, (...args) => event.func(this, ...args));
+    });
+    console.log(this.events)
+    this.emit('startGame',this)
+  }
+
   /**
+   * FIXME
+   *  - When trying to select
    *
-   * @param question
-   * @param options
    */
-  new({question, options}){
+
+  newTerm({question, options}){
     if(!question || !options.length) return
     this.question = question
     this.options = options
     this.options.forEach(str => this.answers.push(str.toLowerCase()))
   }
 
-  start() {
+  startTerminal() {
     if(!this.question || !this.options) return
     console.clear()
     stdout.write(this.question + '\n')
@@ -55,7 +58,7 @@ class Select extends EventEmitter {
       if (opt === this.options.length - 1) {
         this.input = this.options.length - 1
         this.options[opt] += '\n'
-        stdout.write(Select.color(this.options[opt], this._color))
+        stdout.write(Game.color(this.options[opt], this._color))
       } else {
         this.options[opt] += '\n'
         stdout.write(this.options[opt])
@@ -66,8 +69,8 @@ class Select extends EventEmitter {
     stdin.setRawMode(true)
     stdin.resume()
     stdin.setEncoding('utf-8')
-    Select.hideCursor()
-    stdin.on("data", Select.pn(this))
+    Game.hideCursor()
+    stdin.on("data", Game.pn(this))
   }
 
   static pn(self) {
@@ -77,13 +80,13 @@ class Select extends EventEmitter {
         case '\u0004':
         case '\r':
         case '\n':
-          return Select.enter(self)
+          return Game.enter(self)
         case '\u0003':
-          return Select.ctrlc(self)
+          return Game.ctrlc()
         case '\u001b[A':
-          return Select.upArrow(self)
+          return Game.upArrow(self)
         case '\u001b[B':
-          return Select.downArrow(self)
+          return Game.downArrow(self)
 
       }
     }
@@ -91,15 +94,12 @@ class Select extends EventEmitter {
 
   static enter(self) {
     rdl.cursorTo(stdout, 0, self.options.length + 1)
-    self.emit('selected', self.answers[self.input])
+    self.emit('selected',self.answers[self.input])
 
   }
 
-  static ctrlc(self) {
-    stdin.removeListener('data', self.pn)
-    stdin.setRawMode(false)
-    stdin.pause()
-    self.showCursor()
+  static ctrlc() {
+    process.exit(0)
   }
 
   static upArrow(self) {
@@ -113,7 +113,7 @@ class Select extends EventEmitter {
     }
     y = self.cursorLocs.y
     rdl.cursorTo(stdout, 0, y)
-    stdout.write(Select.color(self.options[y - 1], self._color))
+    stdout.write(Game.color(self.options[y - 1], self._color))
     self.input = y - 1
   }
 
@@ -128,7 +128,7 @@ class Select extends EventEmitter {
     }
     y = self.cursorLocs.y
     rdl.cursorTo(stdout, 0, y)
-    stdout.write(Select.color(self.options[y - 1], self._color))
+    stdout.write(Game.color(self.options[y - 1], self._color))
     self.input = y - 1
   }
   static hideCursor() {
@@ -154,7 +154,4 @@ class Select extends EventEmitter {
     return start + str + stop
   }
 }
-
-
-module.exports = Select
-global.Select = Select
+module.exports = Game

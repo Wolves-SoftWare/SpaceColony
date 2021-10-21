@@ -7,7 +7,7 @@ module.exports =(terminal) =>{
         process.exit(0)
         break
       case "start":
-        console.log('not implemented')
+        eventManager.emit('launchGame',eventManager.callGame)
         break
     }
   })
