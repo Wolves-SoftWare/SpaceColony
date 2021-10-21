@@ -1,4 +1,3 @@
-const l = console.log
 const stdout = process.stdout
 const stdin = process.stdin
 const stderr = process.stderr
@@ -23,11 +22,12 @@ class Select extends EventEmitter {
     this.answers =[]
     this.question = question
     this.options = options
-    options.forEach(str => this.answers.push(str.toLowerCase()))
+
 
     this.pointer = pointer
     this._color = color
     this.input
+    require('../Utils/eventList')(this)
     this.cursorLocs = {
       x: 0,
       y: 0
@@ -43,6 +43,7 @@ class Select extends EventEmitter {
     if(!question || !options.length) return
     this.question = question
     this.options = options
+    this.options.forEach(str => this.answers.push(str.toLowerCase()))
   }
 
   start() {

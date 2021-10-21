@@ -1,16 +1,29 @@
 const Colony = require('./Colony')
 const Terminal = require('./Terminal')
 const colonists = require('../Gen/Colonist')
-class Game {
+const Event = require('./Event')
+const {EventEmitter} = require('events')
+const fs = require("fs");
+class Game extends EventEmitter{
   constructor() {
+    super();
     this.colony = new Colony()
-    //this.terminal = new Terminal()
-    this.colonist = []
+    this.eventManager = new Event(this)
+    this.events = new Collection()
+    this.terminal = new Terminal()
+
+
   }
 
-  run(){
-    colonists.generate(5)
+  async run(){
+    //colonists.generate(5)
+    setTimeout(() => {
+      this.eventManager.emit('startGame',this)
+
+    },2000)
   }
+
+
 }
 
 module.exports = Game
