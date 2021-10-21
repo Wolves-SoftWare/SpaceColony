@@ -90,10 +90,6 @@ class Select extends EventEmitter {
   }
 
   static enter(self) {
-    stdin.removeListener('data', Select.pn)
-    stdin.setRawMode(false)
-    stdin.pause()
-    Select.showCursor()
     rdl.cursorTo(stdout, 0, self.options.length + 1)
     self.emit('selected', self.answers[self.input])
 
