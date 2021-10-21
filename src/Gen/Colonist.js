@@ -1,5 +1,6 @@
 let interrestRemain = 2
 let skillRemain = 2
+const fs = require("fs/promises");
 module.exports = {
   generate(size) {
     let colonists = []
@@ -16,10 +17,19 @@ module.exports = {
       })
     }
     for ( const colon of colonists ) {
-      this.generateSocial(colon, colonists)
-      console.log(colon)
-
+      this.generateSocial(colon, colonists.filter(c => c.name !== colon.name))
     }
+    let data = {
+      colons: colonists,
+      building:{},
+      ressource:{},
+      research:{},
+      info:{
+        turn:0
+      }
+    }
+
+    fs.writeFile('./src/data/game/game.json', JSON.stringify(data,null,2))
 
   },
 
@@ -82,8 +92,9 @@ module.exports = {
 
   generateSocial(colon, colonList){
     let chance = Math.floor(Math.random() * 10)+1
+    console.log(chance);
     if(chance === 10){
-      let colon2 = colonList[ Math.floor(Math.random() * colonList.length)]
+      let colon2 = colonList[Math.floor(Math.random() * colonList.length)]
       let point = Math.floor(Math.random() * 125) -75
       colon.social.push({
         name:colon2.name,
