@@ -266,4 +266,4 @@ class Collection extends Map {
     }
 }
 
-global.Collection = Collection;
+module.exports = Collection
