@@ -1,4 +1,4 @@
-const EventManger = require('../class/Event')
+const EventManger = require('../src/class/Event')
 const eventManager = new EventManger()
 module.exports =(terminal) =>{
   terminal.on('selected',input =>{

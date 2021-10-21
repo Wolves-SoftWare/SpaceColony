@@ -38,8 +38,7 @@ class Game extends EventEmitter{
 
   /**
    * FIXME
-   *  - When trying to select
-   *
+   *  - When trying to select, he jump 1
    */
 
   newTerm({question, options}){
