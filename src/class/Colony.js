@@ -1,4 +1,3 @@
-const Game = require('./Game')
 class Colony {
   constructor() {
 
