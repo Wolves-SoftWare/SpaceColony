@@ -22,13 +22,20 @@ def truncDecimal(num,nbDecimal):
     return TrunquedNum
 
 
-def mychoice(liste):
+def mychoice(liste,weight):
+    if len(weight) != 0:
+        string = ""
+        for el in liste:
+            index_el = liste.index(el)
+            string += el * weight[index_el]
+        liste  = [el for el in string]
     index_choose = np.random.rand() * len(liste)
     index_choose = truncDecimal(index_choose,0)
     return liste[index_choose]
 
 
 ###### Run the function
+mychoice(liste,weight=weight)
 i = 0
 while i < 10:
     print(mychoice(liste))
