@@ -1,3 +1,9 @@
+/*
+JS code
+
+Test the probability to generate each skills
+*/
+
 let prob = {
   "0":0,
   "1":0,
@@ -23,17 +29,16 @@ let prob = {
 }
 
 function Normal(x){
-  mu = 0
+  mu = 8
   sigma = 6
-  return 1 /(sigma*Math.sqrt(2*Math.PI)) * Math.E**(-1/2*((x-mu)/sigma)**2)
+  return (1 /(sigma*Math.sqrt(2*Math.PI)) * Math.E**(-1/2*((x-mu)/sigma)**2))
 }
 let skills = Object.keys(prob)
-console.log(skills)
+skills
 let arr = []
 for (const s of skills) {
-  value = Math.round(Normal(s) * 100000)/1000
+  value = Math.round(Normal(s) * 1000)/10
   arr.push(value)
   prob[s] = value
-
 }
-console.log(prob)
+prob
