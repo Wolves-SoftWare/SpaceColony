@@ -1,12 +1,13 @@
 module.exports = {
   name: "selected",
   func: async (game,input) => {
-    switch (input ) {
-      case ('quit'):
-        process.exit(0)
+    switch (input.selectedText ) {
+      case "Start Game":
+        game.emit("launch")
         break
-      case ('start'):
-        game.emit("launchGame")
+      case "Colonist":
+        await game.terminalMenu.ColonistMenu()
+        break
     }
   }
 }

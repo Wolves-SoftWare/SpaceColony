@@ -1,11 +1,6 @@
 module.exports = {
   name: "startGame",
   func: async (game) => {
-    game.newTerm({
-      question:"Space Colonie",
-      options:["Start","Quit"]
-    })
-
-    game.startTerminal()
+    await game.menu(game,["Start Game", "Quit Game"],{clearTerminal: true})
   }
 }
