@@ -1,9 +1,7 @@
 const EventLoader = require("./eventLoader");
 const EventEmitter = require('events')
-const fs = require("fs");
 const Colony = require('./Colony')
 const Menu = require('../Utils/Menu')
-let launch = false
 class Game extends EventEmitter{
   constructor() {
     super()
