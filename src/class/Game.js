@@ -43,6 +43,15 @@ class Game extends EventEmitter{
       game.emit('selected',response)
     })
   }
+
+  async gridMenu(game,arr,options ={}){
+    if(options.clearTerminal){
+      this.terminal.clear()
+    }
+    await this.terminal.gridMenu(arr, options, function(error, response) {
+      game.emit('selected',response)
+    })
+  }
 }
 
 
