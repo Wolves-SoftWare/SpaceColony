@@ -9,8 +9,7 @@ class Menu {
 
   async primaryMenu(options = {}){
     Object.assign(options,this.option)
-
-    await this.game.menu(this.game, ['Building', 'Colonist', 'Research'],options)
+    await this.game.menu(this.game, ['Building', 'Colonist', 'Research','Ressources'],options)
   }
 
   async ColonistMenu(options = {}){
@@ -18,6 +17,7 @@ class Menu {
 
     const colony = this.game.colony.callColony
     const colonistList = colony.colons.map(c => c.name)
+    colonistList.push('Back')
     await this.game.menu(this.game, colonistList,options)
   }
 }
