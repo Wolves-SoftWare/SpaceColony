@@ -1,6 +1,6 @@
 let interrestRemain = 2
 let skillRemain = 2
-const fs = require("fs/promises");
+const fs = require('fs/promises');
 module.exports = {
   generate(size) {
     let colonists = []
@@ -35,10 +35,10 @@ module.exports = {
 
   generateType(){
     let {male,female} = require('../data/assets/name.json')
-    let gender = ["F","M"]
+    let gender = ['F','M']
 
     let selectGender = gender[ Math.floor(Math.random() * gender.length)]
-    return {gender: selectGender,name: selectGender === "M" ? male[ Math.floor(Math.random() * male.length)] : female[ Math.floor(Math.random() * female.length)] }
+    return {gender: selectGender,name: selectGender === 'M' ? male[ Math.floor(Math.random() * male.length)] : female[ Math.floor(Math.random() * female.length)] }
   },
   generateSkill(){
     interrestRemain = 2

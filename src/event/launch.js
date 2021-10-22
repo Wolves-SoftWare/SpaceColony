@@ -1,8 +1,6 @@
 module.exports = {
-  name: "launch",
+  name: 'launch',
   func: async (game,input) => {
-    game.setLaunch(true)
-    console.log(game.isLaunch)
-    await game.terminalMenu.primaryMenu({clearTerminal:true})
+    await game.terminalMenu.primaryMenu({clearTerminal: true})
   }
 }

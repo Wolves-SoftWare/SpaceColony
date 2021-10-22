@@ -45,9 +45,6 @@ class Game extends EventEmitter{
       game.emit('selected',response)
     })
   }
-
-
-
 }
 
 
