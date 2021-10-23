@@ -9,6 +9,7 @@ class Game extends EventEmitter{
     this.colony = new Colony()
     this.terminal = require( 'terminal-kit' ).terminal
     this.terminalMenu = new Menu(this)
+    this.colonist = require('../Gen/Colonist')
     this.terminal.on( 'key' , function( name , matches , data ) {
       if ( name === 'CTRL_C' ) {
         setTimeout( function() { process.exit() } , 100 ) ;
@@ -17,6 +18,7 @@ class Game extends EventEmitter{
   }
 
   async startGame(){
+    this.colonist.generate(3)
     this.events = await EventLoader();
     [...this.events.values()].map((event) => {
       this.on(event.name, (...args) => event.func(this, ...args));

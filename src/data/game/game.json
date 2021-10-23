@@ -1,239 +1,132 @@
 {
-  "colons": [
-    {
-      "name": "Penelope",
-      "gender": "F",
+  "colons": {
+    "Dew": {
+      "name": "Dew",
+      "gender": "M",
       "skill": {
         "farming": {
-          "skill": 11,
-          "interest": 1,
-          "xp": 11000
-        },
-        "extract": {
           "skill": 8,
           "interest": 1,
           "xp": 8000
         },
-        "build": {
-          "skill": 7,
-          "interest": 2,
-          "xp": 7000
-        },
-        "hunting": {
-          "skill": 1,
-          "interest": 1,
-          "xp": 1000
-        },
-        "diplomat": {
-          "skill": 16,
-          "interest": 1,
-          "xp": 16000
-        },
-        "craft": {
-          "skill": 7,
-          "interest": 0,
-          "xp": 7000
-        },
-        "medic": {
-          "skill": 6,
-          "interest": 0,
-          "xp": 6000
-        }
-      },
-      "social": []
-    },
-    {
-      "name": "Lissa",
-      "gender": "F",
-      "skill": {
-        "farming": {
-          "skill": 11,
-          "interest": 1,
-          "xp": 11000
-        },
         "extract": {
+          "skill": 2,
+          "interest": 0,
+          "xp": 2000
+        },
+        "build": {
           "skill": 15,
           "interest": 2,
           "xp": 15000
         },
-        "build": {
-          "skill": 3,
-          "interest": 2,
-          "xp": 3000
-        },
         "hunting": {
-          "skill": 1,
-          "interest": 0,
-          "xp": 1000
+          "skill": 13,
+          "interest": 2,
+          "xp": 13000
         },
         "diplomat": {
-          "skill": 3,
-          "interest": 0,
-          "xp": 3000
+          "skill": 8,
+          "interest": 1,
+          "xp": 8000
         },
         "craft": {
-          "skill": 6,
-          "interest": 0,
-          "xp": 6000
-        },
-        "medic": {
-          "skill": 8,
-          "interest": 0,
-          "xp": 8000
-        }
-      },
-      "social": [
-        {
-          "name": "Skipper",
-          "point": 19,
-          "relationFocus": null
-        },
-        {
-          "name": "Yolane",
-          "point": -61,
-          "relationFocus": null
-        }
-      ]
-    },
-    {
-      "name": "Skipper",
-      "gender": "M",
-      "skill": {
-        "farming": {
           "skill": 9,
           "interest": 1,
           "xp": 9000
         },
-        "extract": {
-          "skill": 4,
-          "interest": 2,
-          "xp": 4000
-        },
-        "build": {
-          "skill": 1,
-          "interest": 2,
-          "xp": 1000
-        },
-        "hunting": {
+        "medic": {
           "skill": 8,
-          "interest": 0,
+          "interest": 1,
           "xp": 8000
-        },
-        "diplomat": {
-          "skill": 14,
-          "interest": 1,
-          "xp": 14000
-        },
-        "craft": {
-          "skill": 1,
-          "interest": 0,
-          "xp": 1000
-        },
-        "medic": {
-          "skill": 12,
-          "interest": 0,
-          "xp": 12000
-        }
-      },
-      "social": [
-        {
-          "name": "Lissa",
-          "point": 19,
-          "relationFocus": null
-        }
-      ]
-    },
-    {
-      "name": "Erinna",
-      "gender": "F",
-      "skill": {
-        "farming": {
-          "skill": 1,
-          "interest": 1,
-          "xp": 1000
-        },
-        "extract": {
-          "skill": 9,
-          "interest": 1,
-          "xp": 9000
-        },
-        "build": {
-          "skill": 17,
-          "interest": 1,
-          "xp": 17000
-        },
-        "hunting": {
-          "skill": 5,
-          "interest": 2,
-          "xp": 5000
-        },
-        "diplomat": {
-          "skill": 16,
-          "interest": 2,
-          "xp": 16000
-        },
-        "craft": {
-          "skill": 6,
-          "interest": 0,
-          "xp": 6000
-        },
-        "medic": {
-          "skill": 3,
-          "interest": 0,
-          "xp": 3000
         }
       },
       "social": []
     },
-    {
-      "name": "Yolane",
-      "gender": "F",
+    "Lester": {
+      "name": "Lester",
+      "gender": "M",
       "skill": {
         "farming": {
-          "skill": 8,
-          "interest": 2,
-          "xp": 8000
+          "skill": 7,
+          "interest": 0,
+          "xp": 7000
         },
         "extract": {
-          "skill": 11,
-          "interest": 2,
-          "xp": 11000
-        },
-        "build": {
           "skill": 5,
           "interest": 0,
           "xp": 5000
         },
+        "build": {
+          "skill": 9,
+          "interest": 1,
+          "xp": 9000
+        },
+        "hunting": {
+          "skill": 12,
+          "interest": 1,
+          "xp": 12000
+        },
+        "diplomat": {
+          "skill": 11,
+          "interest": 2,
+          "xp": 11000
+        },
+        "craft": {
+          "skill": 7,
+          "interest": 1,
+          "xp": 7000
+        },
+        "medic": {
+          "skill": 2,
+          "interest": 2,
+          "xp": 2000
+        }
+      },
+      "social": []
+    },
+    "Trudy": {
+      "name": "Trudy",
+      "gender": "F",
+      "skill": {
+        "farming": {
+          "skill": 12,
+          "interest": 2,
+          "xp": 12000
+        },
+        "extract": {
+          "skill": 5,
+          "interest": 1,
+          "xp": 5000
+        },
+        "build": {
+          "skill": 14,
+          "interest": 0,
+          "xp": 14000
+        },
         "hunting": {
           "skill": 6,
-          "interest": 1,
+          "interest": 0,
           "xp": 6000
         },
         "diplomat": {
-          "skill": 16,
-          "interest": 1,
-          "xp": 16000
+          "skill": 5,
+          "interest": 2,
+          "xp": 5000
         },
         "craft": {
-          "skill": 1,
-          "interest": 1,
-          "xp": 1000
-        },
-        "medic": {
           "skill": 3,
           "interest": 1,
           "xp": 3000
+        },
+        "medic": {
+          "skill": 9,
+          "interest": 1,
+          "xp": 9000
         }
       },
-      "social": [
-        {
-          "name": "Lissa",
-          "point": -61,
-          "relationFocus": null
-        }
-      ]
+      "social": []
     }
-  ],
+  },
   "building": {},
   "ressource": {},
   "research": {},

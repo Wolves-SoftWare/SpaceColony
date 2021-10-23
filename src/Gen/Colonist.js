@@ -3,21 +3,22 @@ let skillRemain = 2
 const fs = require('fs/promises');
 module.exports = {
   generate(size) {
-    let colonists = []
+    let colonists = {}
 
     for ( let i = 0 ; i < size ; i++ ) {
       let type = this.generateType()
 
-      colonists.push({
-        name: type.name,
-        gender: type.gender,
-        skill: this.generateSkill(),
-        social: []
-
+      Object.assign(colonists,{
+        [type.name]:{
+          name:type.name,
+          gender: type.gender,
+          skill: this.generateSkill(),
+          social: []
+        }
       })
     }
-    for ( const colon of colonists ) {
-      this.generateSocial(colon, colonists.filter(c => c.name !== colon.name))
+    for ( const colon of Object.keys(colonists) ) {
+      this.generateSocial(colonists[colon],colonists)
     }
     let data = {
       colons: colonists,
@@ -30,7 +31,6 @@ module.exports = {
     }
 
     fs.writeFile('./src/data/game/game.json', JSON.stringify(data,null,2))
-
   },
 
   generateType(){
@@ -92,16 +92,17 @@ module.exports = {
 
   generateSocial(colon, colonList){
     let chance = Math.floor(Math.random() * 10)+1
-    console.log(chance);
+    console.log(chance,colonList);
     if(chance === 10){
-      let colon2 = colonList[Math.floor(Math.random() * colonList.length)]
+      let list = Object.keys(colonList)
+      let colon2 = list.filter(c => c !== colon.name)[Math.floor(Math.random() * list.length)]
       let point = Math.floor(Math.random() * 125) -75
       colon.social.push({
-        name:colon2.name,
+        name:colonList[colon2].name,
         point,
         relationFocus:null
       })
-      colon2.social.push({
+      colonList[colon2].social.push({
         name:colon.name,
         point,
         relationFocus:null
