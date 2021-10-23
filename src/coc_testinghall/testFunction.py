@@ -24,6 +24,9 @@ def truncDecimal(num,nbDecimal):
 
 def mychoice(liste,weight):
     if len(weight) != 0:
+        min_w = min(weight)
+        weight /= min_w  # Pour normaliser les poids
+        for _ in weight: _ = truncDecimal(_,0) # Enlève les decimals des poids
         string = ""
         for el in liste:
             index_el = liste.index(el)
@@ -38,5 +41,5 @@ def mychoice(liste,weight):
 mychoice(liste,weight=weight)
 i = 0
 while i < 10:
-    print(mychoice(liste))
+    print(mychoice(liste,weight))
     i += 1
