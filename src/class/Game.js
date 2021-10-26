@@ -23,7 +23,6 @@ class Game extends EventEmitter{
     [...this.events.values()].map((event) => {
       this.on(event.name, (...args) => event.func(this, ...args));
     });
-    console.log(this.events)
     this.emit('startGame',this)
   }
 
@@ -34,7 +33,7 @@ class Game extends EventEmitter{
       this.terminal.clear()
     }
     await this.terminal.singleLineMenu(arr, options, function(error, response) {
-      game.emit('selected',response)
+      game.emit('selected',response,options)
     })
   }
   async columnMenu(game,arr,options ={}){
@@ -42,7 +41,7 @@ class Game extends EventEmitter{
       this.terminal.clear()
     }
     await this.terminal.singleColumnMenu(arr, options, function(error, response) {
-      game.emit('selected',response)
+      game.emit('selected',response,options)
     })
   }
 
@@ -51,7 +50,7 @@ class Game extends EventEmitter{
       this.terminal.clear()
     }
     await this.terminal.gridMenu(arr, options, function(error, response) {
-      game.emit('selected',response)
+      game.emit('selected',response,options)
     })
   }
 }

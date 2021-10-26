@@ -27,7 +27,7 @@ class Menu {
     }
     for(const task of colon.tasks){
       if(!task) return
-      relaSTR +=`\n\t${task}`
+      taskSTR +=`\n\t${task}`
     }
     this.game.terminal('Skill')
     this.game.terminal(skillSTR)
@@ -45,7 +45,7 @@ class Menu {
     Object.assign(options,this.option)
 
     const colony = this.game.colony.callColony
-    const colonistList = Object.keys(colony.colons).map(c => c.name)
+    const colonistList = Object.keys(colony.colons)
     colonistList.push('Back')
     await this.game.menu(this.game, colonistList,options)
 
@@ -54,7 +54,7 @@ class Menu {
     let colon = this.game.colony.getColon
     let job = ['woodcutter','hunt','craft']
     await this.game.menu(this.game, job,options)
-    return console.log(colon)
+    return colon
   }
 }
 
