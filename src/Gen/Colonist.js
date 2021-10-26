@@ -13,7 +13,8 @@ module.exports = {
           name:type.name,
           gender: type.gender,
           skill: this.generateSkill(),
-          social: []
+          social: [],
+          tasks:[],
         }
       })
     }

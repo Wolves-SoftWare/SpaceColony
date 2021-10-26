@@ -4,7 +4,8 @@ module.exports = {
     colon.tasks.push(job);
 
     let data = game.colony.callColony
-    Object.assign(data.colon, colon)
+    Object.assign(data.colons[colon.name],colon)
+    game.emit('colonist',colon,{clearTerminal:true})
 
   }
 }

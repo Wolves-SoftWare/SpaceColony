@@ -1,10 +1,10 @@
 module.exports = {
   name: 'selected',
-  func: async (game,input) => {
+  func: async (game,input,options) => {
     let colony = game.colony.callColony
-    const colonistList = Object.keys(colony.colons).map(c => c.name)
+    const colonistList = Object.keys(colony.colons)
     if(colonistList.includes(input.selectedText)){
-      game.emit('colonist',colony.colons.filter(c => c.name === input.selectedText )[0])
+      game.emit('colonist',colony.colons[input.selectedText])
     }
     let job = ['woodcutter','hunt','craft']
     if(job.includes(input.selectedText)){
@@ -15,23 +15,30 @@ module.exports = {
         game.emit('launch')
         break
       case 'Colonist':
-        await game.terminalMenu.ColonistMenu()
+        await game.terminalMenu.ColonistMenu(options)
         break
       case 'Building':
-        await game.terminalMenu.primaryMenu({clearTerminal: true})
+        Object.assign(options,{clearTerminal: true} )
+        await game.terminalMenu.primaryMenu(options)
         break
       case 'Research':
-        await game.terminalMenu.primaryMenu({clearTerminal: true})
+        Object.assign(options,{clearTerminal: true} )
+
+        await game.terminalMenu.primaryMenu(options)
         break
       case 'Ressources':
-        await game.terminalMenu.primaryMenu({clearTerminal: true})
+        Object.assign(options,{clearTerminal: true} )
+
+        await game.terminalMenu.primaryMenu(options)
         break
       case 'Assign':
-        await game.terminalMenu.assignJob()
+        await game.terminalMenu.assignJob(options)
         break
 
       case 'Back':
-        await game.terminalMenu.primaryMenu({clearTerminal: true})
+        Object.assign(options,{clearTerminal: true} )
+
+        await game.terminalMenu.primaryMenu(options)
         break
     }
   }

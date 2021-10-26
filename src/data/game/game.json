@@ -1,130 +1,133 @@
 {
   "colons": {
-    "Dew": {
-      "name": "Dew",
-      "gender": "M",
-      "skill": {
-        "farming": {
-          "skill": 8,
-          "interest": 1,
-          "xp": 8000
-        },
-        "extract": {
-          "skill": 2,
-          "interest": 0,
-          "xp": 2000
-        },
-        "build": {
-          "skill": 15,
-          "interest": 2,
-          "xp": 15000
-        },
-        "hunting": {
-          "skill": 13,
-          "interest": 2,
-          "xp": 13000
-        },
-        "diplomat": {
-          "skill": 8,
-          "interest": 1,
-          "xp": 8000
-        },
-        "craft": {
-          "skill": 9,
-          "interest": 1,
-          "xp": 9000
-        },
-        "medic": {
-          "skill": 8,
-          "interest": 1,
-          "xp": 8000
-        }
-      },
-      "social": []
-    },
-    "Lester": {
-      "name": "Lester",
-      "gender": "M",
-      "skill": {
-        "farming": {
-          "skill": 7,
-          "interest": 0,
-          "xp": 7000
-        },
-        "extract": {
-          "skill": 5,
-          "interest": 0,
-          "xp": 5000
-        },
-        "build": {
-          "skill": 9,
-          "interest": 1,
-          "xp": 9000
-        },
-        "hunting": {
-          "skill": 12,
-          "interest": 1,
-          "xp": 12000
-        },
-        "diplomat": {
-          "skill": 11,
-          "interest": 2,
-          "xp": 11000
-        },
-        "craft": {
-          "skill": 7,
-          "interest": 1,
-          "xp": 7000
-        },
-        "medic": {
-          "skill": 2,
-          "interest": 2,
-          "xp": 2000
-        }
-      },
-      "social": []
-    },
-    "Trudy": {
-      "name": "Trudy",
+    "Priscella": {
+      "name": "Priscella",
       "gender": "F",
       "skill": {
         "farming": {
-          "skill": 12,
+          "skill": 16,
           "interest": 2,
-          "xp": 12000
+          "xp": 16000
         },
         "extract": {
+          "skill": 13,
+          "interest": 1,
+          "xp": 13000
+        },
+        "build": {
+          "skill": 7,
+          "interest": 0,
+          "xp": 7000
+        },
+        "hunting": {
+          "skill": 2,
+          "interest": 0,
+          "xp": 2000
+        },
+        "diplomat": {
+          "skill": 2,
+          "interest": 1,
+          "xp": 2000
+        },
+        "craft": {
+          "skill": 8,
+          "interest": 1,
+          "xp": 8000
+        },
+        "medic": {
+          "skill": 5,
+          "interest": 0,
+          "xp": 5000
+        }
+      },
+      "social": [],
+      "tasks": []
+    },
+    "Hestia": {
+      "name": "Hestia",
+      "gender": "F",
+      "skill": {
+        "farming": {
+          "skill": 18,
+          "interest": 2,
+          "xp": 18000
+        },
+        "extract": {
+          "skill": 1,
+          "interest": 1,
+          "xp": 1000
+        },
+        "build": {
+          "skill": 18,
+          "interest": 0,
+          "xp": 18000
+        },
+        "hunting": {
           "skill": 5,
           "interest": 1,
           "xp": 5000
         },
-        "build": {
+        "diplomat": {
+          "skill": 3,
+          "interest": 2,
+          "xp": 3000
+        },
+        "craft": {
+          "skill": 9,
+          "interest": 1,
+          "xp": 9000
+        },
+        "medic": {
+          "skill": 8,
+          "interest": 0,
+          "xp": 8000
+        }
+      },
+      "social": [],
+      "tasks": []
+    },
+    "Elfie": {
+      "name": "Elfie",
+      "gender": "F",
+      "skill": {
+        "farming": {
+          "skill": 4,
+          "interest": 2,
+          "xp": 4000
+        },
+        "extract": {
           "skill": 14,
           "interest": 0,
           "xp": 14000
         },
+        "build": {
+          "skill": 12,
+          "interest": 1,
+          "xp": 12000
+        },
         "hunting": {
           "skill": 6,
-          "interest": 0,
+          "interest": 2,
           "xp": 6000
         },
         "diplomat": {
-          "skill": 5,
-          "interest": 2,
-          "xp": 5000
+          "skill": 9,
+          "interest": 0,
+          "xp": 9000
         },
         "craft": {
-          "skill": 3,
+          "skill": 4,
           "interest": 1,
-          "xp": 3000
+          "xp": 4000
         },
         "medic": {
-          "skill": 9,
+          "skill": 4,
           "interest": 1,
-          "xp": 9000
+          "xp": 4000
         }
       },
-      "social": []
+      "social": [],
+      "tasks": []
     }
   },
   "building": {},
