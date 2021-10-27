@@ -31,15 +31,26 @@ module.exports = {
 
         await game.terminalMenu.primaryMenu(options)
         break
+      case 'End Turn':
+        Object.assign(options,{clearTerminal: true} )
+        game.emit('endturn',game.colony.callColony)
+
+        await game.terminalMenu.primaryMenu({clearTerminal: true})
+        break
+
       case 'Assign':
         await game.terminalMenu.assignJob(options)
         break
-
-      case 'Back':
+      case 'Back To Main Menu':
         Object.assign(options,{clearTerminal: true} )
 
-        await game.terminalMenu.primaryMenu(options)
+        await game.terminalMenu.primaryMenu({clearTerminal: true})
         break
+      case 'Back To Colonist Menu':
+        await game.terminalMenu.ColonistMenu({clearTerminal: true})
+        break
+      case 'Quit Game':
+        process.exit(0)
     }
   }
 }
