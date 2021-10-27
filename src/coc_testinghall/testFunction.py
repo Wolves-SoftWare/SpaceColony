@@ -43,6 +43,6 @@ weight = [1,2,4,1,0]
 liste = ["a","b","c","d","e"]
 mychoice(liste,weight=weight)
 i = 0
-while i < 10:
+while i < 2:
     print(mychoice(liste,weight))
     i += 1
