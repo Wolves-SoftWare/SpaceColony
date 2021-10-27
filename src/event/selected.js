@@ -1,15 +1,16 @@
 module.exports = {
   name: 'selected',
-  func: async (game,input,options) => {
-    let colony = game.colony.callColony
-    const colonistList = Object.keys(colony.colons)
-    if(colonistList.includes(input.selectedText)){
+  func: async (game,input,options) => { // event de tous les input dans le jeux
+    let colony = game.colony.callColony // appel la colonie
+    const colonistList = Object.keys(colony.colons) // prend la liste des colon
+    if(colonistList.includes(input.selectedText)){ // si l'input est egale a un nom de colon
       game.emit('colonist',colony.colons[input.selectedText])
     }
     let job = ['woodcutter','hunt','craft']
-    if(job.includes(input.selectedText)){
+    if(job.includes(input.selectedText)){// si l'input est egale a un job
       game.emit('assignJob',game.colony.getColon,input.selectedText)
     }
+    // tous les autre input
     switch (input.selectedText ) {
       case 'Start Game':
         game.emit('launch')

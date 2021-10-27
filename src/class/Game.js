@@ -2,6 +2,7 @@ const EventLoader = require("./eventLoader");
 const EventEmitter = require('events')
 const Colony = require('./Colony')
 const Menu = require('../Utils/Menu')
+
 class Game extends EventEmitter{
   constructor() {
     super()
@@ -10,23 +11,30 @@ class Game extends EventEmitter{
     this.terminal = require( 'terminal-kit' ).terminal
     this.terminalMenu = new Menu(this)
     this.colonist = require('../Gen/Colonist')
+    this.utils = require('../Utils/Utils')
     this.terminal.on( 'key' , function( name , matches , data ) {
-      if ( name === 'CTRL_C' ) {
+      if ( name === 'CTRL_C' ) { // si on tape ctrl + c ca quite le jeux
         setTimeout( function() { process.exit() } , 100 ) ;
       }
     });
   }
 
-  async startGame(){
-    this.colonist.generate(3)
-    this.events = await EventLoader();
+  async startGame(){ // lanceur
+    this.colonist.generate(3) // genere 3 colon
+    this.events = await EventLoader(); // charge les event
     [...this.events.values()].map((event) => {
       this.on(event.name, (...args) => event.func(this, ...args));
     });
-    this.emit('startGame',this)
+    this.emit('startGame',this) // lance le jeu
   }
 
-
+  /**
+   *
+   * @param game le jeu
+   * @param arr les boutons
+   * @param options option du terminal
+   * @returns {Promise<void>}
+   */
 
   async menu(game,arr,options ={}){
     if(options.clearTerminal){
@@ -36,6 +44,13 @@ class Game extends EventEmitter{
       game.emit('selected',response,options)
     })
   }
+  /**
+   *
+   * @param game le jeu
+   * @param arr les boutons
+   * @param options option du terminal
+   * @returns {Promise<void>}
+   */
   async columnMenu(game,arr,options ={}){
     if(options.clearTerminal){
       this.terminal.clear()
@@ -44,7 +59,13 @@ class Game extends EventEmitter{
       game.emit('selected',response,options)
     })
   }
-
+  /**
+   *
+   * @param game le jeu
+   * @param arr les boutons
+   * @param options option du terminal
+   * @returns {Promise<void>}
+   */
   async gridMenu(game,arr,options ={}){
     if(options.clearTerminal){
       this.terminal.clear()
