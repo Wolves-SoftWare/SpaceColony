@@ -1,4 +1,4 @@
-
+require('./src/Utils/prototype')
 const Collection = require('./src/Utils/Collection')
 global.Collection = Collection
 
