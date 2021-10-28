@@ -4,7 +4,7 @@ module.exports = {
     let colonists = {}
 
     for ( let i = 0 ; i < size ; i++ ) {
-      let type = this.generateType() // choisie entre et femme et son nom
+      let type = this.generateType() // choisie entre male et femme et son nom
 
       Object.assign(colonists,{
         [type.name]:{
