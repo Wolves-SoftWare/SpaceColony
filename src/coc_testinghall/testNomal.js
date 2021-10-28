@@ -31,7 +31,12 @@ let prob = {
 function Normal(x){
   mu = 8
   sigma = 6
-  return (1 /(sigma*Math.sqrt(2*Math.PI)) * Math.E**(-1/2*((x-mu)/sigma)**2))
+  if (x.lenght!=0){
+    for (const el of x){
+        temp = (1 /(sigma*Math.sqrt(2*Math.PI)) * Math.E**(-1/2*((x-mu)/sigma)**2))
+        output.push(temp)}}
+  else output = (1 /(sigma*Math.sqrt(2*Math.PI)) * Math.E**(-1/2*((x-mu)/sigma)**2))
+  return output
 }
 let skills = Object.keys(prob)
 skills
