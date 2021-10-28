@@ -57,7 +57,7 @@ module.exports = {
     let skillLvl = require('../Utils/Utils').choice( [1,2,3,4,5,6 ,7 ,8 ,9,10,11,12,13,14,15,16,17,18,19,20],[7,7,7,8,10,15,12,12,9 ,7 ,6 ,5 ,4, 4 ,3 ,2 ,2 ,1, 1] )
     let interest =  require('../Utils/Utils').choice( [0,1,2],[20,7,1],{allowZero:false} )
     let modificator = interest === 1 ? 1.4 : interest === 2 ? 1.5 : 1
-    let xp = parseInt(skillLvl*1000 + (skillLvl-1)*200/modificator) //calcule de l'xp en fonction de l'intérêt et du niveau de la personne
+    let xp = parseInt((skillLvl*1000 + (skillLvl-1)*200)/modificator) //calcule de l'xp en fonction de l'intérêt et du niveau de la personne
 
     //retourne les valeur
     return{
