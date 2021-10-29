@@ -58,7 +58,7 @@ module.exports = {
      * TODO
      *  - Rework
      */
-    return new Promise((resolve, reject) => {
+    /*return new Promise((resolve, reject) => {
       for ( let colon of Object.keys(colonList) ) {
         let chance = 1
         if(chance === 1){
@@ -66,7 +66,7 @@ module.exports = {
           let list = Object.keys(colonList) // prend les nom des colon
           let colon2 = list.filter(c => c !== colon.name)[Math.floor(Math.random() * list.length)] // filtre le colon ou le social est généré
           let point = Math.floor(Math.random() * 125) -75 // choisie une valeur entre -75 et 75
-          console.log(colon2)
+          console.log(list)
           //l'ajout au deux colon
           colon.social.push({
             name:colonList[colon2].name,
@@ -81,8 +81,42 @@ module.exports = {
         }
       }
       resolve(colonList)
+    })*/
+
+    return new Promise((resolve, reject) => {
+
+        const colonNameList = Object.keys(colonList) // Transforme les keys en array de string
+        for(const name of colonNameList) { // parcour la liste
+          let choice = require('../Utils/Utils').choice([0,1], [9,1])
+          if(choice === 1) {
+            const colon = colonList[name] //recuper le colon
+            let colon2Name = colonNameList.filter(c => c !== name)[Math.floor(Math.random() * colonNameList.filter(c => c !== name).length)] // filtre le colon selectionné et en choisie un au hasard
+            let colon2 = colonList[colon2Name] //recuper le 2eme colon
+            let point = Math.floor(Math.random() * 125) - 75 // choisie une valeur entre -75 et 75
+            // fait la liste des socials deja fait
+            let existSocial = []
+            colon.social.forEach(s => {
+              existSocial.push(s.name)
+            })
+
+            if ( !existSocial.includes(colon2Name) ) { // si il a deja des relation social avec le colon2
+              //l'ajout au deux colon
+              colonList[name].social.push({
+                name: colon2.name,
+                point,
+                relationFocus: null
+              })
+              colonList[colon2Name].social.push({
+                name,
+                point,
+                relationFocus: null
+              })
+            }
+          }
+      }
+      console.log(colonList);
+      resolve(colonList)
     })
 
-
-  }
+    }
 }
