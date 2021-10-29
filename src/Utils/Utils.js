@@ -34,7 +34,8 @@ module.exports = {
           chance.push(elem)
         }
       }
-      return chance // Choisi un Element au hasard de la liste de string
+
+      return options.getAll ? chance : chance[Math.floor(Math.random() * chance.length)] // Choisi un Element au hasard de la liste de string
     }else {
       for(const elem of list){
         weights.push(1)
@@ -62,7 +63,7 @@ module.exports = {
           chance.push(elem)
         }
       }
-      return chance // Choisi un Element au hasard de la liste de string
+      return options.getAll ? chance : chance[Math.floor(Math.random() * chance.length)] // Choisi un Element au hasard de la liste de string
     }
 
   },

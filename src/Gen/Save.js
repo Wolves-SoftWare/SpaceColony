@@ -16,12 +16,14 @@ module.exports = {
           }}
       ColonistGen.generate(colonistNumber).then((data) =>{
           ColonistGen.generateSocial(data).then((buildedData) =>{
-              Object.assign(gameData.colons,buildedData)
+              PlanetGen.generate().then(planet =>{
+                  Object.assign(gameData.colons,buildedData)
+                  Object.assign(gameData.planet,planet)
+                  fs.writeFile('./src/data/game/game.json', JSON.stringify(gameData,null,2)) // on enregistre dans le JSON et on le format
+              } )
           })
       })
-      console.log(PlanetGen.generate())
-      return
-       fs.writeFile('./src/data/game/game.json', JSON.stringify(gameData,null,2)) // on enregistre dans le JSON et on le format
+
 
 
   }

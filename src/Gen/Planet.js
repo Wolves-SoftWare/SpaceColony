@@ -11,7 +11,6 @@ module.exports = {
         ressources:require('../Gen/Planet').generateRessource(),
         faune:["Golem de Bronze","Guenaudes","Donican","Horupine"]
       }
-      console.log(data)
       resolve(data)
     })
   },
@@ -19,7 +18,7 @@ module.exports = {
   generateRessource(){
     let ressourceMap = require('../Utils/Utils').choice(
             ['Fer','Charbon','Cuivre','Etain','Acier','Or','Plastacier','Titane'],
-        [[14,15,16],[14,15],[12],[12],[9,10],[5,6],[3],[2]],{arrayData:true})
+        [[14,15,16],[14,15],[12],[12],[9,10],[5,6],[3],[2]],{arrayData:true,getAll:true})
     console.log(ressourceMap);
     let ressourcesData = {}
 
