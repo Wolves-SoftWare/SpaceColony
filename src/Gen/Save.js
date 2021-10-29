@@ -6,9 +6,9 @@ const fs = require('fs/promises');
 module.exports = {
   makeSave(colonistNumber){
       const gameData = {
-          colons: {}, // on met les colon
+          colons: {},
           building:{},
-          ressource:{},
+          storage:{},
           research:{},
           planet:{},
           info:{
@@ -20,8 +20,8 @@ module.exports = {
           })
       })
       console.log(PlanetGen.generate())
-
-      fs.writeFile('./src/data/game/game.json', JSON.stringify(gameData,null,2)) // on enregistre dans le JSON et on le format
+      return
+       fs.writeFile('./src/data/game/game.json', JSON.stringify(gameData,null,2)) // on enregistre dans le JSON et on le format
 
 
   }
