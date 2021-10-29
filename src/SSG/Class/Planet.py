@@ -14,7 +14,7 @@ class Planet:
     -   self.Distance: Distance par rapport au soleil
 
     """
-    def __init__(self, auto=True, itsOrbit=None, MoonType=None):
+    def __init__(self, auto=True, itsOrbit=None, MoonType=None, Name=None):
         if itsOrbit is None:
             self.haveOrbit = False
             self.Zone = rd.choice(["Inner","Habitable","Outer"])
@@ -53,6 +53,7 @@ class Planet:
         self.Climate = str()
         self.Day = int()
         self.Note = str()
+        self.Name = Name
         self.TotalMoonSize = float()
         if auto:    self.Autogen()
 

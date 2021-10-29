@@ -5,7 +5,7 @@ TODO
       - Production
       - Social
       - Tache du tour
- */
+*/
 class Turn {
   constructor() {
     this.colony = new Colony()
