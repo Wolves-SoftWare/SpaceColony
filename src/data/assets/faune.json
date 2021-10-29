@@ -1,0 +1,41 @@
+{
+  "Golem de Bronze": {
+    "domaine": "Aggresif",
+    "type": "Creature",
+    "stats": {
+      "vie": 100,
+      "attaque": 7,
+      "defence": 45
+    }
+  },
+  "Guenaudes": {
+    "domaine": "herbivore",
+    "type": "Annimaux",
+
+    "stats": {
+      "vie": 20,
+      "attaque": 3,
+      "defence": 5
+    }
+  },
+  "Donican": {
+    "domaine": "herbivore",
+    "type": "Annimaux",
+
+    "stats": {
+      "vie": 45,
+      "attaque": 2,
+      "defence": 15
+    }
+  },
+  "Horupine": {
+    "domaine": "prédateur",
+    "type": "Annimaux",
+
+    "stats": {
+      "vie": 20,
+      "attaque": 12,
+      "defence": 5
+    }
+  }
+}
