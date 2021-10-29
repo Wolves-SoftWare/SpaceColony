@@ -4,12 +4,32 @@ module.exports = {
      * TODO
      *  - Continue to gen planet (ressources, faune, flore)
      */
-    return {
-      name: require('../Utils/Utils').capitalize(this.namegen(1)[0]),
-      tier: 100,
-      ressources:['Fer','Charbon','Or','Acier','Cuivre','Etain'],
-      faune:["Golem de Bronze","Guenaudes","Donican","Horupine"]
+    return new Promise(function(resolve, reject) {
+      let data ={
+        name: require('../Utils/Utils').capitalize(require('../Gen/Planet').namegen(1)[0]),
+        tier: 'dev',
+        ressources:require('../Gen/Planet').generateRessource(),
+        faune:["Golem de Bronze","Guenaudes","Donican","Horupine"]
+      }
+      console.log(data)
+      resolve(data)
+    })
+  },
+
+  generateRessource(){
+    let ressourceMap = require('../Utils/Utils').choice(
+            ['Fer','Charbon','Cuivre','Etain','Acier','Or','Plastacier','Titane'],
+        [[14,15,16],[14,15],[12],[12],[9,10],[5,6],[3],[2]],{arrayData:true})
+    console.log(ressourceMap);
+    let ressourcesData = {}
+
+    for(const ressources of ressourceMap){
+      let filter = ressourceMap.filter(c => c === ressources).length
+      Object.assign(ressourcesData,{
+        [ressources]: ((filter*2)* Math.floor(1000)*1.6)
+      })
     }
+    return ressourcesData
   },
 
   tierSelector(number){
