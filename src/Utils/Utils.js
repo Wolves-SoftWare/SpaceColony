@@ -30,7 +30,17 @@ module.exports = {
       }
     }
     return chance[Math.floor(Math.random() * chance.length)] // Choisi un Element au hasard de la liste de string
+  },
+
+  capitalize (value) {
+    const textArray = value.split(' ');
+    let capitalizedText = '';
+    for ( let i = 0 ; i < textArray.length ; i++ ) {
+      capitalizedText += textArray[i].charAt(0).toUpperCase() + textArray[i].slice(1) + ' '
+    }
+    return capitalizedText.trim()
   }
+
 }
 
 
