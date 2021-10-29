@@ -4,8 +4,12 @@ module.exports = {
    * @param list {Array} An array of choices available
    * @param weights An array of weights
    */
-  choice(list, weights) {
+  choice(list, weights = []) {
     if ( !weights.length ) return // Si weights et vide le programme s'arrete
+
+    for(const elem of list){
+      weights.push(1)
+    }
     //crée deux nouvelle liste
     let newListweights = []
     let newList = []
@@ -24,7 +28,7 @@ module.exports = {
     //Parcourt les element de la liste pour faire un string des probabilité
     for ( const elem of list ) {
       let index = list.indexOf(elem)
-      let indice = weights[index]
+      let indice = !weights[index]? 1:weights[index]
       for ( let i = 0 ; i < indice ; i++ ) {
         chance.push(elem)
       }
