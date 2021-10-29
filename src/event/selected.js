@@ -34,12 +34,12 @@ module.exports = {
         break
       case 'End Turn':
         Object.assign(options,{clearTerminal: true} )
-        game.emit('endturn',game.colony.callColony)
+        game.emit('endTurn',game.colony.callColony)
 
         await game.terminalMenu.primaryMenu({clearTerminal: true})
         break
 
-      case 'Assign':
+      case 'Assignment':
         await game.terminalMenu.assignJob(options)
         break
       case 'Back To Main Menu':

@@ -48,7 +48,7 @@ class Menu {
     this.game.terminal('\n\n')
 
     this.game.colony.setColon(colon) // Assigne le colon sélectionné pour le recup plus facilement
-    await this.game.menu(this.game, ['Back To Colonist Menu','Assign'],options)
+    await this.game.menu(this.game, ['Back To Colonist Menu','Assignment'],options)
   }
   async ColonistMenu(options = {}){
     Object.assign(options,this.option)// Ajout les option dans la fonction au option par défaut
