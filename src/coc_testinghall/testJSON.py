@@ -1,6 +1,10 @@
 """
 TODO
     - Faire une boucle pour convertir tout les elements d'une liste qui sont dans[Planet,Star,Satellite,System,Orbit]
+    - Etre doué
+    - Faire fonctionner ce pu*** de code de mer** qui n'est pourtant pas compliqué
+            - je parle de la f2
+            - f1 c'est pas bon
 """
 
 import json
@@ -12,26 +16,43 @@ from src.SSG.Class.Orbit import Orbit
 import os
 os.chdir("../SSG")
 path = "/Users/floriandelrieu/OneDrive/Logiciels et Jeux/SpaceColony/src/coc_testinghall/"
-my_details = {
-    'name': 'John Doe',
-    'age' : 29
-}
+NonJSONWritableList = [Planet,Star,Satellite,Orbit,System]
 
-P1 = Planet(Name="TestPlanet")
-S1 = System()
+S = Star()
+dico = S.__dict__
 
 def SaveInJSON(Planet,json_name):
     dico = Planet.__dict__
-    json_file = open(path + json_name+".json","w")
+    dico = f1(dico)
+    json_file = open(json_name+".json","w")
     json.dump(dico, json_file)
 
-def ConvertInDict(object):
-    dico = object.__dict__
-    for k in list(dico.keys()):
-        if type(dico[k]) in [Planet,Star,Satellite,System,Orbit]:
-            dico[k] = dico[k].__dict__
-        elif type(dico[k]) is list:
-            for el in dico[k]:
-                if type(el) in [Planet,Star,Satellite,System,Orbit]:
-                    el = el.__dict__
-SaveInJSON(S1,"S1")
+def f2(obj):
+    obj = obj.__dict__
+    for el in obj:
+        if type(obj[el]) is (list or dict):
+            f2(el)
+        elif type(el) in NonJSONWritableList:
+            el = el.__dict__
+            f2(el)
+
+
+def f1(Objet):
+    if type(Objet) in NonJSONWritableList:
+        dico = Objet.__dict__
+        for thiskey in dico.keys():
+            if type(dico[thiskey]) is list:
+                for el in dico[thiskey]:
+                    f1(el)
+        return dico
+
+
+#            if type(dico[thiskey]) is dict:
+#                newdico = dico[thiskey]
+#                for el in newdico
+
+#    return type(Objet) not in [Planet,System,Orbit,Star,Satellite]
+
+
+f2(S)
+#SaveInJSON(TestingStar,path + "S1")
