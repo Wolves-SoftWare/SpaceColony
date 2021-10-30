@@ -13,7 +13,10 @@ module.exports = {
 
     if(options.arrayData){
       for(const elem of list){
-        weights.push([1,1])
+        let index = list.indexOf(elem)
+        if(!weights[index]){
+          weights.push([1,1])
+        }
       }
 
       let newListweights = []
@@ -23,23 +26,26 @@ module.exports = {
         const index = weights.indexOf(w)
         if ( w !== 0 ) {
           newListweights.push(w)
-          newList.push(weights[index])
+          newList.push(list[index])
         }
       })
       let chance = []
       //Parcourt les element de la liste pour faire un string des probabilité
-      for ( const elem of list ) {
-        let index = list.indexOf(elem)
-        for ( let i = 0 ; i < weights[index][Math.floor(Math.random() * weights[index].length)] ; i++ ) {
+      for ( const elem of newList ) {
+        let index = newList.indexOf(elem)
+        for ( let i = 0 ; i < newListweights[index][Math.floor(Math.random() * newListweights[index].length)] ; i++ ) {
           chance.push(elem)
         }
       }
-
       return options.getAll ? chance : chance[Math.floor(Math.random() * chance.length)] // Choisi un Element au hasard de la liste de string
     }else {
       for(const elem of list){
-        weights.push(1)
+        let index = list.indexOf(elem)
+        if(!weights[index]){
+          weights.push(1)
+        }
       }
+      console.log(weights,list);
       //crée deux nouvelle liste
       let newListweights = []
       let newList = []
@@ -49,16 +55,16 @@ module.exports = {
         const index = weights.indexOf(w)
         if ( w !== 0 ) {
           newListweights.push(w)
-          newList.push(weights[index])
+          newList.push(list[index])
         }
 
       })
 
       let chance = []
       //Parcourt les element de la liste pour faire un string des probabilité
-      for ( const elem of list ) {
-        let index = list.indexOf(elem)
-        let indice = !weights[index]? 1:weights[index]
+      for ( const elem of newList ) {
+        let index = newList.indexOf(elem)
+        let indice = !newListweights[index]? 1:newListweights[index]
         for ( let i = 0 ; i < indice ; i++ ) {
           chance.push(elem)
         }
