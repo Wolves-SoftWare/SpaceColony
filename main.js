@@ -9,4 +9,5 @@ const game = new Game()
 require('./src/class/eventLoader')(game)
 
 //game.startGame()
-require('./src/Utils/Utils').choice([1,2,5],[[14,15,16]],{arrayData:true})
+console.log(require('./src/Utils/Utils').choice([1,2,5],[],{arrayData:true,getAll:true})
+);
