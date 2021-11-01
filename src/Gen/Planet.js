@@ -19,7 +19,6 @@ module.exports = {
     let ressourceMap = require('../Utils/Utils').choice(
             ['Fer','Charbon','Cuivre','Etain','Acier','Or','Plastacier','Titane'],
         [[14,15,16],[14,15],[12],[12],[9,10],[5,6],[3],[2]],{arrayData:true,getAll:true})
-    console.log(ressourceMap);
     let ressourcesData = {}
 
     for(const ressources of ressourceMap){

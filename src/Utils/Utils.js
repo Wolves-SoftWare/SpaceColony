@@ -45,7 +45,6 @@ module.exports = {
           weights.push(1)
         }
       }
-      console.log(weights,list);
       //crée deux nouvelle liste
       let newListweights = []
       let newList = []
