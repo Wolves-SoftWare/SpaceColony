@@ -1,8 +1,8 @@
 {
   "colons": {
-    "Nye": {
-      "name": "Nye",
-      "gender": "M",
+    "Caty": {
+      "name": "Caty",
+      "gender": "F",
       "skill": {
         "farming": {
           "skillLvl": 1,
@@ -10,235 +10,57 @@
           "xp": 1000
         },
         "extract": {
-          "skillLvl": 8,
-          "interest": 0,
-          "xp": 9400
-        },
-        "build": {
-          "skillLvl": 3,
-          "interest": 0,
-          "xp": 3400
-        },
-        "hunting": {
-          "skillLvl": 2,
-          "interest": 1,
-          "xp": 2142
-        },
-        "diplomat": {
-          "skillLvl": 6,
-          "interest": 0,
-          "xp": 7000
-        },
-        "craft": {
-          "skillLvl": 3,
-          "interest": 1,
-          "xp": 3285
-        },
-        "medic": {
-          "skillLvl": 1,
-          "interest": 1,
-          "xp": 1000
-        }
-      },
-      "social": [
-        {
-          "name": "Terza",
-          "point": -60,
-          "relationFocus": null
-        },
-        {
-          "name": "Glen",
-          "point": 44,
-          "relationFocus": null
-        },
-        {
-          "name": "Vite",
-          "point": 5,
-          "relationFocus": null
-        }
-      ],
-      "tasks": []
-    },
-    "Zaria": {
-      "name": "Zaria",
-      "gender": "F",
-      "skill": {
-        "farming": {
-          "skillLvl": 2,
-          "interest": 1,
-          "xp": 2142
-        },
-        "extract": {
-          "skillLvl": 7,
-          "interest": 0,
-          "xp": 8200
-        },
-        "build": {
-          "skillLvl": 3,
-          "interest": 0,
-          "xp": 3400
-        },
-        "hunting": {
-          "skillLvl": 1,
-          "interest": 0,
-          "xp": 1000
-        },
-        "diplomat": {
-          "skillLvl": 5,
-          "interest": 1,
-          "xp": 5571
-        },
-        "craft": {
-          "skillLvl": 9,
-          "interest": 0,
-          "xp": 10600
-        },
-        "medic": {
-          "skillLvl": 7,
-          "interest": 0,
-          "xp": 8200
-        }
-      },
-      "social": [
-        {
-          "name": "Glen",
-          "point": 24,
-          "relationFocus": null
-        },
-        {
-          "name": "Terza",
-          "point": -41,
-          "relationFocus": null
-        }
-      ],
-      "tasks": []
-    },
-    "Glen": {
-      "name": "Glen",
-      "gender": "F",
-      "skill": {
-        "farming": {
           "skillLvl": 5,
           "interest": 0,
           "xp": 5800
         },
-        "extract": {
-          "skillLvl": 13,
-          "interest": 1,
-          "xp": 14714
-        },
         "build": {
-          "skillLvl": 8,
-          "interest": 0,
-          "xp": 9400
-        },
-        "hunting": {
-          "skillLvl": 6,
-          "interest": 0,
-          "xp": 7000
-        },
-        "diplomat": {
-          "skillLvl": 9,
-          "interest": 0,
-          "xp": 10600
-        },
-        "craft": {
-          "skillLvl": 9,
-          "interest": 1,
-          "xp": 10142
-        },
-        "medic": {
-          "skillLvl": 14,
-          "interest": 0,
-          "xp": 16600
-        }
-      },
-      "social": [
-        {
-          "name": "Zaria",
-          "point": 24,
-          "relationFocus": null
-        },
-        {
-          "name": "Nye",
-          "point": 44,
-          "relationFocus": null
-        }
-      ],
-      "tasks": []
-    },
-    "Terza": {
-      "name": "Terza",
-      "gender": "F",
-      "skill": {
-        "farming": {
-          "skillLvl": 9,
-          "interest": 1,
-          "xp": 10142
-        },
-        "extract": {
-          "skillLvl": 1,
-          "interest": 2,
-          "xp": 1000
-        },
-        "build": {
-          "skillLvl": 6,
-          "interest": 2,
-          "xp": 6666
-        },
-        "hunting": {
           "skillLvl": 5,
           "interest": 1,
-          "xp": 5571
+          "xp": 4833
+        },
+        "hunting": {
+          "skillLvl": 4,
+          "interest": 1,
+          "xp": 3833
         },
         "diplomat": {
-          "skillLvl": 3,
-          "interest": 2,
-          "xp": 3266
+          "skillLvl": 7,
+          "interest": 0,
+          "xp": 8200
         },
         "craft": {
-          "skillLvl": 9,
-          "interest": 0,
-          "xp": 10600
+          "skillLvl": 1,
+          "interest": 2,
+          "xp": 666
         },
         "medic": {
-          "skillLvl": 7,
-          "interest": 2,
-          "xp": 7800
+          "skillLvl": 1,
+          "interest": 0,
+          "xp": 1000
         }
       },
-      "social": [
-        {
-          "name": "Nye",
-          "point": -60,
-          "relationFocus": null
-        },
-        {
-          "name": "Zaria",
-          "point": -41,
-          "relationFocus": null
-        }
-      ],
+      "social": [],
       "tasks": []
     },
-    "Vite": {
-      "name": "Vite",
+    "Manuel": {
+      "name": "Manuel",
       "gender": "M",
       "skill": {
         "farming": {
-          "skillLvl": 15,
-          "interest": 1,
-          "xp": 17000
+          "skillLvl": 1,
+          "interest": 0,
+          "xp": 1000
         },
         "extract": {
-          "skillLvl": 13,
+          "skillLvl": 4,
           "interest": 0,
-          "xp": 15400
+          "xp": 4600
         },
         "build": {
           "skillLvl": 5,
-          "interest": 1,
-          "xp": 5571
+          "interest": 0,
+          "xp": 5800
         },
         "hunting": {
           "skillLvl": 4,
@@ -246,9 +68,95 @@
           "xp": 4600
         },
         "diplomat": {
+          "skillLvl": 1,
+          "interest": 2,
+          "xp": 666
+        },
+        "craft": {
+          "skillLvl": 6,
+          "interest": 1,
+          "xp": 5833
+        },
+        "medic": {
+          "skillLvl": 16,
+          "interest": 1,
+          "xp": 15833
+        }
+      },
+      "social": [],
+      "tasks": []
+    },
+    "Cam": {
+      "name": "Cam",
+      "gender": "M",
+      "skill": {
+        "farming": {
+          "skillLvl": 18,
+          "interest": 0,
+          "xp": 21400
+        },
+        "extract": {
+          "skillLvl": 5,
+          "interest": 0,
+          "xp": 5800
+        },
+        "build": {
+          "skillLvl": 1,
+          "interest": 0,
+          "xp": 1000
+        },
+        "hunting": {
+          "skillLvl": 6,
+          "interest": 1,
+          "xp": 5833
+        },
+        "diplomat": {
+          "skillLvl": 1,
+          "interest": 1,
+          "xp": 833
+        },
+        "craft": {
+          "skillLvl": 4,
+          "interest": 1,
+          "xp": 3833
+        },
+        "medic": {
           "skillLvl": 6,
           "interest": 0,
           "xp": 7000
+        }
+      },
+      "social": [],
+      "tasks": []
+    },
+    "Jareb": {
+      "name": "Jareb",
+      "gender": "M",
+      "skill": {
+        "farming": {
+          "skillLvl": 6,
+          "interest": 0,
+          "xp": 7000
+        },
+        "extract": {
+          "skillLvl": 1,
+          "interest": 0,
+          "xp": 1000
+        },
+        "build": {
+          "skillLvl": 6,
+          "interest": 0,
+          "xp": 7000
+        },
+        "hunting": {
+          "skillLvl": 16,
+          "interest": 0,
+          "xp": 19000
+        },
+        "diplomat": {
+          "skillLvl": 12,
+          "interest": 0,
+          "xp": 14200
         },
         "craft": {
           "skillLvl": 6,
@@ -256,24 +164,81 @@
           "xp": 7000
         },
         "medic": {
-          "skillLvl": 6,
-          "interest": 1,
-          "xp": 6714
+          "skillLvl": 5,
+          "interest": 2,
+          "xp": 3866
         }
       },
-      "social": [
-        {
-          "name": "Nye",
-          "point": 5,
-          "relationFocus": null
+      "social": [],
+      "tasks": []
+    },
+    "Beitris": {
+      "name": "Beitris",
+      "gender": "F",
+      "skill": {
+        "farming": {
+          "skillLvl": 6,
+          "interest": 0,
+          "xp": 7000
+        },
+        "extract": {
+          "skillLvl": 6,
+          "interest": 0,
+          "xp": 7000
+        },
+        "build": {
+          "skillLvl": 12,
+          "interest": 1,
+          "xp": 11833
+        },
+        "hunting": {
+          "skillLvl": 7,
+          "interest": 1,
+          "xp": 6833
+        },
+        "diplomat": {
+          "skillLvl": 7,
+          "interest": 0,
+          "xp": 8200
+        },
+        "craft": {
+          "skillLvl": 1,
+          "interest": 1,
+          "xp": 833
+        },
+        "medic": {
+          "skillLvl": 13,
+          "interest": 0,
+          "xp": 15400
         }
-      ],
+      },
+      "social": [],
       "tasks": []
     }
   },
   "building": {},
-  "ressource": {},
+  "storage": {},
   "research": {},
+  "planet": {
+    "name": "Qelia",
+    "tier": "dev",
+    "ressources": {
+      "Fer": 48000,
+      "Charbon": 48000,
+      "Cuivre": 38400,
+      "Etain": 38400,
+      "Acier": 32000,
+      "Or": 19200,
+      "Plastacier": 9600,
+      "Titane": 6400
+    },
+    "faune": [
+      "Golem de Bronze",
+      "Guenaudes",
+      "Donican",
+      "Horupine"
+    ]
+  },
   "info": {
     "turn": 0
   }
