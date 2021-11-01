@@ -27,7 +27,7 @@ S.StarList = [s1,s2]
 
 def SaveInJSON(Planet,json_name):
     dico = Planet.__dict__
-    dico = f1(dico)
+    #dico = f1(dico)
     json_file = open(json_name+".json","w")
     json.dump(dico, json_file)
 
@@ -42,13 +42,10 @@ def f2(obj):
         obj = obj.__dict__ # Transforme en :dict:
     for el in obj: # Dectecte si des éléments de :obj: sont :JSON writable:
         if type(el) in NonJSONWritableList:
-            obj[el] = el.__dict__
             f2(el)
-        elif type(obj[el]) is list:
+            return obj
+        elif type(obj[el]) is (list or dict):
             obj[el] = f2(obj[el])
-        elif type(obj[el]) is dict:
-            obj[el] = f2(obj[el])
-    return obj
 
 S = f2(S)
 #SaveInJSON(TestingStar,path + "S1")
