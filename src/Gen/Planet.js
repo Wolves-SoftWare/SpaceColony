@@ -9,7 +9,7 @@ module.exports = {
         name: require('../Utils/Utils').capitalize(require('../Gen/Planet').namegen(1)[0]),
         tier: 'dev',
         ressources:require('../Gen/Planet').generateRessource(),
-        faune:["Golem de Bronze","Guenaudes","Donican","Horupine"]
+        faune:["Guenaudes","Donican","Horupine"]
       }
       resolve(data)
     })
@@ -176,7 +176,7 @@ module.exports = {
             'nope',
             'tis',
             'clite'],
-          '6': ['una',
+          'qs': ['una',
             'ion',
             'iea',
             'iri',
