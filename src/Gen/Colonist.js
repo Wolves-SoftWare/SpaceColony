@@ -54,35 +54,6 @@ module.exports = {
   },
 
   generateSocial(colonList){
-    /**
-     * TODO
-     *  - Rework
-     */
-    /*return new Promise((resolve, reject) => {
-      for ( let colon of Object.keys(colonList) ) {
-        let chance = 1
-        if(chance === 1){
-          colon = colonList[colon]
-          let list = Object.keys(colonList) // prend les nom des colon
-          let colon2 = list.filter(c => c !== colon.name)[Math.floor(Math.random() * list.length)] // filtre le colon ou le social est généré
-          let point = Math.floor(Math.random() * 125) -75 // choisie une valeur entre -75 et 75
-          console.log(list)
-          //l'ajout au deux colon
-          colon.social.push({
-            name:colonList[colon2].name,
-            point,
-            relationFocus:null
-          })
-          colonList[colon2].social.push({
-            name:colon.name,
-            point,
-            relationFocus:null
-          })
-        }
-      }
-      resolve(colonList)
-    })*/
-
     return new Promise((resolve, reject) => {
 
         const colonNameList = Object.keys(colonList) // Transforme les keys en array de string
