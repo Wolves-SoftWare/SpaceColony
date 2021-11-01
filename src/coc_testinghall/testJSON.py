@@ -13,13 +13,17 @@ from src.SSG.Class.System import System
 from src.SSG.Class.Star import Star
 from src.SSG.Class.Satellite import Satellite
 from src.SSG.Class.Orbit import Orbit
+from src.coc_testinghall.TestingObject import Testing_system, Testing_Star
 import os
 os.chdir("../SSG")
 path = "/Users/floriandelrieu/OneDrive/Logiciels et Jeux/SpaceColony/src/coc_testinghall/"
-NonJSONWritableList = [Planet,Star,Satellite,Orbit,System]
+NonJSONWritableList = [Planet,Star,Satellite,Orbit,System,
+                       Testing_system,Testing_Star]
 
-S = Star()
-dico = S.__dict__
+S = Testing_system()
+s1 = Testing_Star()
+s2 = Testing_Star()
+S.StarList = [s1,s2]
 
 def SaveInJSON(Planet,json_name):
     dico = Planet.__dict__
@@ -28,31 +32,23 @@ def SaveInJSON(Planet,json_name):
     json.dump(dico, json_file)
 
 def f2(obj):
-    obj = obj.__dict__
-    for el in obj:
+    """
+    FIXME
         if type(obj[el]) is (list or dict):
+         - erreur quand obj == list car el est un string
+         - Faire un algo pour simplifier
+    """
+    if type(obj) in NonJSONWritableList:  # Verifie si :obj: est pas :JSON writable:
+        obj = obj.__dict__ # Transforme en :dict:
+    for el in obj: # Dectecte si des éléments de :obj: sont :JSON writable:
+        if type(el) in NonJSONWritableList:
+            obj[el] = el.__dict__
             f2(el)
-        elif type(el) in NonJSONWritableList:
-            el = el.__dict__
-            f2(el)
+        elif type(obj[el]) is list:
+            obj[el] = f2(obj[el])
+        elif type(obj[el]) is dict:
+            obj[el] = f2(obj[el])
+    return obj
 
-
-def f1(Objet):
-    if type(Objet) in NonJSONWritableList:
-        dico = Objet.__dict__
-        for thiskey in dico.keys():
-            if type(dico[thiskey]) is list:
-                for el in dico[thiskey]:
-                    f1(el)
-        return dico
-
-
-#            if type(dico[thiskey]) is dict:
-#                newdico = dico[thiskey]
-#                for el in newdico
-
-#    return type(Objet) not in [Planet,System,Orbit,Star,Satellite]
-
-
-f2(S)
+S = f2(S)
 #SaveInJSON(TestingStar,path + "S1")
