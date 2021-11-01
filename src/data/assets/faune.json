@@ -1,5 +1,5 @@
 {
-  "Golem de Bronze": {
+  "golem de Bronze": {
     "domaine": "Aggresif",
     "type": "Creature",
     "stats": {
@@ -8,30 +8,27 @@
       "defence": 45
     }
   },
-  "Guenaudes": {
+  "guenaudes": {
     "domaine": "herbivore",
     "type": "Annimaux",
-
     "stats": {
       "vie": 20,
       "attaque": 3,
       "defence": 5
     }
   },
-  "Donican": {
+  "donican": {
     "domaine": "herbivore",
     "type": "Annimaux",
-
     "stats": {
       "vie": 45,
       "attaque": 2,
       "defence": 15
     }
   },
-  "Horupine": {
+  "horupine": {
     "domaine": "prédateur",
     "type": "Annimaux",
-
     "stats": {
       "vie": 20,
       "attaque": 12,
