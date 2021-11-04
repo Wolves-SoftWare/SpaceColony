@@ -6,7 +6,6 @@ TODO
             - je parle de la f2
             - f1 c'est pas bon
 """
-
 import json
 from src.SSG.Class.Planet import Planet
 from src.SSG.Class.System import System
@@ -42,8 +41,10 @@ def f2(obj):
     for el in obj: # Détecte si des éléments de :obj: sont :JSON writable:
         if type(el) in NonJSONWritableList:
             obj = f2(el)
-        elif type(obj[el]) is (list or dict):
-            obj[el] = f2(obj[el])
+        elif type(obj[el]) is list:
+            curr_list = obj[el]
+            for this_el in curr_list:
+                this_el = f2(this_el)
     return obj
 
 S = f2(S)
