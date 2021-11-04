@@ -21,31 +21,30 @@ NonJSONWritableList = [Planet,Star,Satellite,Orbit,System,
                        Testing_system,Testing_Star]
 
 S = Testing_system()
+#del S.StarList
 s1 = Testing_Star()
 s2 = Testing_Star()
 S.StarList = [s1,s2]
 
-def SaveInJSON(Planet,json_name):
-    dico = Planet.__dict__
+def SaveInJSON(Objet,json_name):
+    #dico = Planet.__dict__
     #dico = f1(dico)
     json_file = open(json_name+".json","w")
-    json.dump(dico, json_file)
+    json.dump(Objet, json_file)
 
 def f2(obj):
     """
     FIXME
         if type(obj[el]) is (list or dict):
-         - erreur quand obj == list car el est un string
-         - Faire un algo pour simplifier
     """
     if type(obj) in NonJSONWritableList:  # Verifie si :obj: est pas :JSON writable:
         obj = obj.__dict__ # Transforme en :dict:
-    for el in obj: # Dectecte si des éléments de :obj: sont :JSON writable:
+    for el in obj: # Détecte si des éléments de :obj: sont :JSON writable:
         if type(el) in NonJSONWritableList:
-            f2(el)
-            return obj
+            obj = f2(el)
         elif type(obj[el]) is (list or dict):
             obj[el] = f2(obj[el])
+    return obj
 
 S = f2(S)
-#SaveInJSON(TestingStar,path + "S1")
+#SaveInJSON(S,path + "S1")
