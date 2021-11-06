@@ -1,16 +1,12 @@
 import random as rd
 import numpy as np
-from MyPack.Convert import Csv2Dict
-from MyPack.Utilities import getFromDict
+from Convert import Csv2Dict
+from Utilities import getFromDict
 CSV_path = "CSV/"
 Function_path = "Functions/"
 """
 Regroupement de fonction essentielles pour le fonctionnement de :SystemGen:
 """
-#import random as rd
-#from MyPack.Convert import *
-#import MyPack.Utilities as utils
-
 
 def choice(dico):  # Fonction pour faire un choix l'objet dico
     """

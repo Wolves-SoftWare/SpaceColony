@@ -1,6 +1,6 @@
 from src.SSG.Functions.Functions import *
 from src.SSG.Functions.Tables import *
-from MyPack.Utilities import truncSignificatif
+from Utilities import truncSignificatif
 import random as rd
 import numpy as np
 

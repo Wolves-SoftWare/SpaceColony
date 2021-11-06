@@ -4,7 +4,7 @@ from src.SSG.Functions.Tables import *
 from src.SSG.Functions.Functions import *
 import random as rd
 import numpy as np
-from MyPack.Utilities import truncSignificatif
+from Utilities import truncSignificatif
 
 class Orbit:
     """

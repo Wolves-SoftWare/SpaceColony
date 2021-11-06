@@ -77,11 +77,18 @@ def CreateSpecialPlanet(PlaneteType,PlaneteZone):
 	P.Show()
 	return P
 
+def CreateSpecialSystem(NbOrbit):
+	S = System()
+	while S.nbOrbit != NbOrbit:
+		S = System()
+	S.Show()
+	return S
+
 
 ########################################################################################################
 
 #P = CreateSpecialPlanet("Small Terrestrial","Inner")
 S = System()
 #S.Show()
-S.OrderingPlanets()
-S.Show()
+#S.OrderingPlanets()
+#S.Show()
