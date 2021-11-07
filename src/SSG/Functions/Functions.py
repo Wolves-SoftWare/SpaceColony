@@ -197,7 +197,7 @@ def determineMineralSurvey(PlanetaryType):
 
 
 def MoonAsPlanet(MoonType,Zone):
-    from Tables import InnerZone,HabitableZone,OuterZone
+    from Functions.Tables import InnerZone,HabitableZone,OuterZone
     Type = str()
     if MoonType in ["HugeMoon"]:
         # Liste des type de planete que peut devenir la lune

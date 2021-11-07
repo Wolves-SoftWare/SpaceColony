@@ -89,6 +89,7 @@ def CreateSpecialSystem(NbOrbit):
 
 #P = CreateSpecialPlanet("Small Terrestrial","Inner")
 S = System()
+S1 = S.__copy__()
 #S.Show()
 #S.OrderingPlanets()
 #S.Show()

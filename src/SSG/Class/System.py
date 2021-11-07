@@ -229,7 +229,6 @@ class System:
 
     def __copy__(self):
         newObject = System()
-        for attr in newObject.__dict__:
-            newObject.__delattr__(attr)
+        for attr in self.__dict__:
             newObject.__setattr__(attr,self.__getattribute__(attr))
         return newObject
