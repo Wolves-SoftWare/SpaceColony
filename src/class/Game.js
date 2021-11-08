@@ -10,7 +10,7 @@ class Game extends EventEmitter{
     this.colony = new Colony()
     this.terminal = require( 'terminal-kit' ).terminal
     this.terminalMenu = new Menu(this)
-    this.colonist = require('../Gen/Colonist')
+    this.saveSystem = require('../Gen/Save')
     this.utils = require('../Utils/Utils')
     this.terminal.on( 'key' , function( name , matches , data ) {
       if ( name === 'CTRL_C' ) { // si on tape ctrl + c ca quite le jeux
@@ -20,12 +20,12 @@ class Game extends EventEmitter{
   }
 
   async startGame(){ // lanceur
-    this.colonist.generate(3) // genere 3 colon
-    this.events = await EventLoader(); // charge les event
+    this.saveSystem.makeSave(3) // genere 3 colon
+    /*this.events = await EventLoader(); // charge les event
     [...this.events.values()].map((event) => {
       this.on(event.name, (...args) => event.func(this, ...args));
-    });
-    this.emit('startGame',this) // lance le jeu
+    });*
+    this.emit('startGame',this) // lance le jeu*/
   }
 
   /**

@@ -1,8 +1,7 @@
-from Class.Star import *
-from Functions.Functions import *
+from Class.Planet import Planet
+from Class.Star import Star
+from Functions.RollingFunctions import *
 from Functions.Tables import *
-import random as rd
-import numpy as np
 
 class System:
     """
@@ -85,8 +84,7 @@ class System:
         Ajoute :_nbStar: étoiles dans le :System: et definie l'étoile principales et ses compangons
         """
         for i in np.arange(self._nbStar):
-            if i==0:    IsPrimary = True  # La premiere étoiles est l'étoile principale
-            else:       IsPrimary = False
+            IsPrimary = i==0
             self.addStar(IsPrimary=IsPrimary)
 
     def addStar(self,Auto=True,IsPrimary=False):
@@ -217,7 +215,7 @@ class System:
                                     print("   |      |        {} {}".format("+",thisSatellite))
 
     def OrderingPlanets(self):
-        temp_list = list()
+        temp_list = []
         for thisStar in self.Star_list:             # for each stars
             for thisOrbit in thisStar.Orbit_list:   # for each orbit
                 temp_list.append({                  # temporary list for prepare the sorting
@@ -232,3 +230,4 @@ class System:
         for attr in self.__dict__:
             newObject.__setattr__(attr,self.__getattribute__(attr))
         return newObject
+

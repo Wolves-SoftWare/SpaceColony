@@ -1,7 +1,7 @@
-from Class.System import *
-from Class.Planet import *
-from Functions.Functions import *
-import numpy as np
+from Class.Orbit import Orbit
+from Class.Planet import Planet
+from Class.System import System
+from Functions.RollingFunctions import *
 
 """
 Fonctions utilisant :SystemGen: pour la génération de systemes
@@ -70,7 +70,7 @@ def BasicGeneration():
 	S.createSatellites()
 	S.Show(3)
 
-def CreateSpecialPlanet(PlaneteType,PlaneteZone):
+def CreateSpecialPlanet(PlaneteType: str,PlaneteZone: str):
 	P = Planet()
 	while P.Type != PlaneteType or P.Zone != PlaneteZone:
 		P = Planet()
@@ -84,6 +84,12 @@ def CreateSpecialSystem(NbOrbit):
 	S.Show()
 	return S
 
+def CreateSpecialOrbit(OrbitContain:str, OrbitZone:str = ""):
+	if OrbitZone == "": OrbitZone = rd.choice(["Inner","Habitable","Outer"])
+	O = Orbit()
+	while O.Contain != OrbitContain or O.Zone != OrbitZone:
+		O = Orbit()
+	return O
 
 ########################################################################################################
 
@@ -93,3 +99,5 @@ S1 = S.__copy__()
 #S.Show()
 #S.OrderingPlanets()
 #S.Show()
+
+#O = CreateSpecialOrbit("Asteroid Belt","Outer")

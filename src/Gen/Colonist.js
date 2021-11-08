@@ -1,37 +1,23 @@
-const fs = require('fs/promises');
 module.exports = {
   generate(size) {
-    let colonists = {}
-
+    return new Promise((resolve, reject) =>{
+      let colonists = {}
     for ( let i = 0 ; i < size ; i++ ) {
       let type = this.generateType() // choisie entre male et femme et son nom
 
-      Object.assign(colonists,{
-        [type.name]:{
-          name:type.name,
-          gender: type.gender,
-          skill: this.generateSkill(),// on genere les skill
-          social: [],
-          tasks:[],
-        }
-      }) // Ajoute le colon dans l'objet
-    }
 
-    //Pour tous les colon créer on fait le social entre eux
-    for ( const colon of Object.keys(colonists) ) {
-      this.generateSocial(colonists[colon],colonists)
-    }
-    // on construit les donnée
-    let data = {
-      colons: colonists, // on met les colon
-      building:{},
-      ressource:{},
-      research:{},
-      info:{
-        turn:0
+        Object.assign(colonists,{
+          [type.name]:{
+            name:type.name,
+            gender: type.gender,
+            skill: this.generateSkill(),// on genere les skill
+            social: [],
+            tasks:[],
+          }
+        }) // Ajoute le colon dans l'objet
       }
-    }
-    fs.writeFile('./src/data/game/game.json', JSON.stringify(data,null,2)) // on enregistre dans le JSON et on le format
+      resolve(colonists)
+    })
   },
 
   generateType(){
@@ -67,25 +53,40 @@ module.exports = {
     }
   },
 
-  generateSocial(colon, colonList){
-    let chance = Math.floor(Math.random() * 10)+1
-    if(chance){
-      let list = Object.keys(colonList) // prend les nom des colon
-      let colon2 = list.filter(c => c !== colon.name)[Math.floor(Math.random() * list.length)] // filtre le colon ou le social est généré
-      let point = Math.floor(Math.random() * 125) -75 // choisie une valeur entre -75 et 75
-      if(!colonList[colon2]) return // random error
+  generateSocial(colonList){
+    return new Promise((resolve, reject) => {
 
-      //l'ajout au deux colon
-      colon.social.push({
-        name:colonList[colon2].name,
-        point,
-        relationFocus:null
-      })
-      colonList[colon2].social.push({
-        name:colon.name,
-        point,
-        relationFocus:null
-      })
+        const colonNameList = Object.keys(colonList) // Transforme les keys en array de string
+        for(const name of colonNameList) { // parcour la liste
+          let choice = require('../Utils/Utils').choice([0,1], [9,1])
+          if(choice === 1) {
+            const colon = colonList[name] //recuper le colon
+            let colon2Name = colonNameList.filter(c => c !== name)[Math.floor(Math.random() * colonNameList.filter(c => c !== name).length)] // filtre le colon selectionné et en choisie un au hasard
+            let colon2 = colonList[colon2Name] //recuper le 2eme colon
+            let point = Math.floor(Math.random() * 125) - 75 // choisie une valeur entre -75 et 75
+            // fait la liste des socials deja fait
+            let existSocial = []
+            colon.social.forEach(s => {
+              existSocial.push(s.name)
+            })
+
+            if ( !existSocial.includes(colon2Name) ) { // si il a deja des relation social avec le colon2
+              //l'ajout au deux colon
+              colonList[name].social.push({
+                name: colon2.name,
+                point,
+                relationFocus: null
+              })
+              colonList[colon2Name].social.push({
+                name,
+                point,
+                relationFocus: null
+              })
+            }
+          }
+      }
+      resolve(colonList)
+    })
+
     }
-  }
 }
