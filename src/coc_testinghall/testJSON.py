@@ -1,10 +1,6 @@
 """
-TODO
-    - Faire une boucle pour convertir tout les elements d'une liste qui sont dans[Planet,Star,Satellite,System,Orbit]
-    - Etre doué
-    - Faire fonctionner ce pu*** de code de mer** qui n'est pourtant pas compliqué
-            - je parle de la f2
-            - f1 c'est pas bon
+FIXME
+    - bug when runnig System.createPlanet()
 """
 import json
 from Class.Planet import Planet
@@ -20,7 +16,8 @@ NonJSONWritableList = [Planet,Star,Satellite,Orbit,System,
                        Testing_system,Testing_Star]
 
 S = System()
-#S.createPlanet()
+S.clearorbit()
+S.createPlanet()
 #del S.StarList
 #s1 = Testing_Star()
 #s2 = Testing_Star()
@@ -72,4 +69,4 @@ def f2(obj):
 
 S2 = S.__copy__()
 S2 = f2(S2)
-SaveInJSON(S2,path + "S1")
+#SaveInJSON(S2,path + "S1")
