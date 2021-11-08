@@ -1,10 +1,10 @@
-from Class.Satellite import *
-from Class.Planet import *
-from Functions.Tables import *
-from Functions.Functions import *
+from src.SSG.Class.Satellite import *
+from src.SSG.Class.Planet import *
+from src.SSG.Functions.Tables import *
+from src.SSG.Functions.Functions import *
 import random as rd
 import numpy as np
-from MyPack.Utilities import truncSignificatif
+from Utilities import truncDecimal
 
 class Orbit:
     """
@@ -52,7 +52,7 @@ class Orbit:
         print("{} deleted".format(self))
 
     def Autogen(self):
-        self.OrbitDistance = truncSignificatif(rd.uniform(0,self.MaxRange),2)  # Distance de l'orbite
+        self.OrbitDistance = truncDecimal(rd.uniform(0,self.MaxRange),2)  # Distance de l'orbite
         self.Zone = DetermineZone(self.Parent,self.OrbitDistance)  # Determine la zone où se situe l'orbite
         if   self.Zone == "Inner":      self.Contain = choice(InnerZone)
         elif self.Zone == "Habitable":  self.Contain = choice(HabitableZone)

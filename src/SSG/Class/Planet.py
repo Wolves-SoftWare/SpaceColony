@@ -1,6 +1,6 @@
-from Functions.Functions import *
-from Functions.Tables import *
-from MyPack.Utilities import truncSignificatif
+from src.SSG.Functions.Functions import *
+from src.SSG.Functions.Tables import *
+from Utilities import truncDecimal
 import random as rd
 import numpy as np
 
@@ -60,7 +60,7 @@ class Planet:
     def __call__(self, *args, **kwargs): pass
 
     def __repr__(self):
-        txt = "(size: {} earth radius)".format(truncSignificatif(self.SizeInEarthRadius,3))
+        txt = "(size: {} earth radius)".format(truncDecimal(self.SizeInEarthRadius,3))
         if self.IsHabitable:    txt = "{} world ".format(self.Type) + txt
         else:                   txt = "{} planet ".format(self.Type) + txt
         return txt
@@ -308,16 +308,16 @@ Global Notes:               {}
         """.format(
         self.Type,Parent,
         self.Zone,self.Distance,
-        self.Size,truncSignificatif(self.SizeInEarthRadius,3),
-        truncSignificatif(np.pi * self.Size ** 2 / 4,5),
-        truncSignificatif(self.Gravity,3),
+        self.Size,truncDecimal(self.SizeInEarthRadius,3),
+        truncDecimal(np.pi * self.Size ** 2 / 4,5),
+        truncDecimal(self.Gravity,3),
         self.nbSatellites,
         self.ImperialClassification,
         self.AtmDensity,
         self.AtmosphereComposition,
-        truncSignificatif(self.Hydroshpere,2),
-        truncSignificatif(self.Cryosphere,2),
-        truncSignificatif(self.Land,2),
+        truncDecimal(self.Hydroshpere,2),
+        truncDecimal(self.Cryosphere,2),
+        truncDecimal(self.Land,2),
         self.Volcanism,
         self.TectonicActivity,
         self.Humidity,

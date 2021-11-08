@@ -226,3 +226,9 @@ class System:
                 })
             temp_list.sort(key=lambda x: x.get('Distance'))  # sorting regarding the distance
             thisStar.Orbit_list = [el["Orbit"] for el in temp_list]
+
+    def __copy__(self):
+        newObject = System()
+        for attr in self.__dict__:
+            newObject.__setattr__(attr,self.__getattribute__(attr))
+        return newObject
