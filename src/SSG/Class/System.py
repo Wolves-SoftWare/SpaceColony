@@ -230,4 +230,3 @@ class System:
         for attr in self.__dict__:
             newObject.__setattr__(attr,self.__getattribute__(attr))
         return newObject
-

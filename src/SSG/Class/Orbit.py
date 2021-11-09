@@ -1,4 +1,4 @@
-import Class.Planet
+from Class.Planet import Planet
 from Class.Satellite import *
 from Functions.RollingFunctions import *
 from Functions.Tables import *
@@ -96,7 +96,7 @@ class Orbit:
 
     def createPlanet(self):
         if self.Contain != "Asteroid Belt":
-            setattr(self,"Planet", Class.Planet.Planet(itsOrbit=self))
+            setattr(self,"Planet", Planet(itsOrbit=self))
         else:
             print("No planet found here !")
 
