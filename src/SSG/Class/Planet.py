@@ -75,7 +75,6 @@ class Planet:
         self.Surface = 2*np.pi*self.Size**2/4
         self.Gravity = self.Size / 12000
     # self.atmosphere
-        # modifiers
         modifiers = 0
         if   self.Zone == "Inner":      modifiers -= 2
         elif self.Zone == "Habitable":  modifiers += 1
