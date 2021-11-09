@@ -12,7 +12,7 @@ class Satellite:
     -   self.Size: Taille
     -   self.Distance: Distance par rapport à sa planète
     """
-    def __init__(self,SatType,auto=True):
+    def __init__(self,SatType="Moonlets",auto=True):
         self.Composition = []
         self.Type = SatType
         self.Size = int()

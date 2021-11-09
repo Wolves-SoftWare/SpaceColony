@@ -14,3 +14,9 @@ class Testing_Star:
         self.IsPrimary = True  # Si etoile primaire ou companion etc...
         self.IsDwarf = False  # Si l'étoile est Naine ou pas
         self.Class, self.Decimal, self.Size = "G","3","V"
+        self.Orbit_list = []
+
+class Testing_Planet:
+    def __init__(self):
+        self.Size = 10
+        self.isHabitable = True
