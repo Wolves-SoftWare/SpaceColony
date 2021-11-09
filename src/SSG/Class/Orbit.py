@@ -45,7 +45,7 @@ class Orbit:
         if self.IsRogue: txt = "Rogue " + txt
         return txt
 
-    def __del__(self,show=True):
+    def __del__(self,show=False):
         if show:
             print(f"{self} deleted")
 
@@ -94,10 +94,10 @@ class Orbit:
     #  Compte le nombre total de satellites
         for k in self.dicoSatellites.keys(): self.nbSatellites += self.dicoSatellites[k]
 
-    def createPlanet(self):
+    def createPlanet(self,show=False):
         if self.Contain != "Asteroid Belt":
             setattr(self,"Planet", Planet(itsOrbit=self))
-        else:
+        elif show:
             print("No planet found here !")
 
     def createSatellites(self):
