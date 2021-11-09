@@ -4,7 +4,7 @@ import numpy as np
 from Functions.OthersFunctions import setGravLock
 from Functions.RollingFunctions import *
 from Functions.Tables import *
-from MyPack.Utilities import truncDecimal
+from Utilities import truncDecimal
 
 
 class Planet:

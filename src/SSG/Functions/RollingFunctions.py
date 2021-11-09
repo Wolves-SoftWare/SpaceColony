@@ -1,9 +1,8 @@
 import random as rd
 
 import numpy as np
-from MyPack.Convert import Csv2Dict
-from MyPack.Math import y_value
-from MyPack.Utilities import getFromDict, truncSignificatif
+from Convert import Csv2Dict
+from Utilities import getFromDict, truncDecimal, y_value
 
 CSV_path = "CSV/"
 Function_path = "Functions/"

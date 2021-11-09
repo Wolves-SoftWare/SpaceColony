@@ -32,3 +32,20 @@ def getFromDict(Dico,KeyList,Log=False):
         else:
             if Log: print(str(thisKey) + " not found !")
     return newDico
+
+def y_value(f_array,x_array,x):
+    """
+    Calcul la fonction affine passant point par point et renvoie l'ordonnée d'un point x situé entre deux point
+    de :x_array:
+    :param f_array: Nuage de point contenant les ordonnées
+    :param x_array: Nuage de point contenant les x
+    :return: as float
+    """
+    f_array , x_array = np.array(f_array) , np.array(x_array)
+    assert len(f_array) == len(x_array) , ":f_array: and :x_array: must be the same lenght"
+    assert x_array[0] <= x <= x_array[-1] , "x doit être compris dans :x_array:"
+    for i,el in enumerate(x_array):
+        if x_array[i] <= x <= x_array[i+1]: indic = i
+    a = (f_array[indic+1] - f_array[indic])/(x_array[indic+1] - x_array[indic])
+    b = f_array[indic] - a * x_array[indic]
+    return float(a*x + b)
