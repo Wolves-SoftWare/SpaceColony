@@ -16,7 +16,7 @@ NonJSONWritableList = [Planet,Star,Satellite,Orbit,System,
                        Testing_system,Testing_Star]
 
 S = System()
-S.clearorbit()
+#S.clearorbit()
 S.createPlanet()
 #del S.StarList
 #s1 = Testing_Star()
