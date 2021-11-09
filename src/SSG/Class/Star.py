@@ -111,6 +111,12 @@ class Star:
                 print("This orbit don't exist")
         self.nbOrbit = len(self.Orbit_list)
 
+    def __copy__(self):
+        newObject = Star()
+        for attr in self.__dict__:
+            newObject.__setattr__(attr,self.__getattribute__(attr))
+        return newObject
+
     def WriteNote(self):
         """
         Ecris des infos diverse complémentaire en fonction du tirage et de sa catégorie

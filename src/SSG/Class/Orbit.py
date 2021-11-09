@@ -114,3 +114,9 @@ class Orbit:
                 else:
                     self.Satellites_list.append(Satellite(currentSatellitesType))  # Creer l'objet :satellite: de Type :k:
         self.Contain = cacheContain  # recupere la veritable valeur
+
+    def __copy__(self):
+        newObject = Orbit()
+        for attr in self.__dict__:
+            newObject.__setattr__(attr,self.__getattribute__(attr))
+        return newObject

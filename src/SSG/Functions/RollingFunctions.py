@@ -221,4 +221,4 @@ def rollDistance(object):
     UA_array = [0.2,0.4,0.7,1,1.6,2.8,5.2,10,19.6,38.8,77.2,154.0,307.6,614]
     roll = rd.uniform(0, object.MaxRange)
     output = y_value(UA_array,OrbitDistance_array,roll)
-    return truncSignificatif(output,2)
+    return truncDecimal(output,2)

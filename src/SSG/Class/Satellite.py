@@ -29,3 +29,9 @@ class Satellite:
         elif self.Type in ["SmallMoon"]:                self.Size = rd.choice(np.arange(1500,2200,100))
     # self.Distance
         self.Distance = DetermineDistance(self.Type)  # Recupere distance via .csv (voir :DetermineDistance:)
+
+    def __copy__(self):
+        newObject = Satellite()
+        for attr in self.__dict__:
+            newObject.__setattr__(attr,self.__getattribute__(attr))
+        return newObject

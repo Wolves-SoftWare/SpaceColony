@@ -270,6 +270,12 @@ class Planet:
         if self.IsHabitable:
             self.ImperialClassification = choice(ImperialClass)
 
+    def __copy__(self):
+        newObject = Planet()
+        for attr in self.__dict__:
+            newObject.__setattr__(attr,self.__getattribute__(attr))
+        return newObject
+
     def Show(self):
         Parent = "n Unknow" if not self.haveOrbit else " "+ str(self.Parent)
         txt = f"""+++ NO NAMED +++: {self.Type} planet around a{Parent} star
@@ -288,9 +294,9 @@ Approximate Population:     +++ NO ENTRY +++
 
 Atmosphere:                 {self.AtmDensity} atmosphere
 Main Composition:           {self.AtmosphereComposition}
-Hydrosphere:                {truncSignificatif(self.Hydroshpere,2)} %
-Cryosphere:                 {truncSignificatif(self.Cryosphere,2)} %
-Land cover:                 {truncSignificatif(self.Land,2)} %
+Hydrosphere:                {truncDecimal(self.Hydroshpere,2)} %
+Cryosphere:                 {truncDecimal(self.Cryosphere,2)} %
+Land cover:                 {truncDecimal(self.Land,2)} %
 Volcanism:                  {self.Volcanism} %
 Tectonic activity:          {self.TectonicActivity} %
 Humidity:                   {self.Humidity} %

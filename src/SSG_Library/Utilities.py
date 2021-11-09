@@ -1,6 +1,8 @@
 """
 Regroupe différentes méthodes générales pour diveres applications
 """
+import numpy as np
+
 def truncDecimal(num,nbDecimal):
     NumInString = str(num)
     NumInList = NumInString.split(".")
