@@ -1,179 +1,50 @@
 {
   "colons": {
-    "Caty": {
-      "name": "Caty",
+    "Raquel": {
+      "name": "Raquel",
       "gender": "F",
       "skill": {
         "farming": {
-          "skillLvl": 1,
-          "interest": 0,
-          "xp": 1000
+          "skillLvl": 18,
+          "interest": 1,
+          "xp": 17833
         },
         "extract": {
-          "skillLvl": 5,
-          "interest": 0,
-          "xp": 5800
-        },
-        "build": {
           "skillLvl": 5,
           "interest": 1,
           "xp": 4833
         },
-        "hunting": {
-          "skillLvl": 4,
-          "interest": 1,
-          "xp": 3833
-        },
-        "diplomat": {
-          "skillLvl": 7,
-          "interest": 0,
-          "xp": 8200
-        },
-        "craft": {
-          "skillLvl": 1,
-          "interest": 2,
-          "xp": 666
-        },
-        "medic": {
-          "skillLvl": 1,
-          "interest": 0,
-          "xp": 1000
-        }
-      },
-      "social": [],
-      "tasks": []
-    },
-    "Manuel": {
-      "name": "Manuel",
-      "gender": "M",
-      "skill": {
-        "farming": {
-          "skillLvl": 1,
-          "interest": 0,
-          "xp": 1000
-        },
-        "extract": {
-          "skillLvl": 4,
-          "interest": 0,
-          "xp": 4600
-        },
         "build": {
-          "skillLvl": 5,
-          "interest": 0,
-          "xp": 5800
-        },
-        "hunting": {
-          "skillLvl": 4,
-          "interest": 0,
-          "xp": 4600
-        },
-        "diplomat": {
-          "skillLvl": 1,
-          "interest": 2,
-          "xp": 666
-        },
-        "craft": {
-          "skillLvl": 6,
-          "interest": 1,
-          "xp": 5833
-        },
-        "medic": {
-          "skillLvl": 16,
-          "interest": 1,
-          "xp": 15833
-        }
-      },
-      "social": [],
-      "tasks": []
-    },
-    "Cam": {
-      "name": "Cam",
-      "gender": "M",
-      "skill": {
-        "farming": {
-          "skillLvl": 18,
-          "interest": 0,
-          "xp": 21400
-        },
-        "extract": {
-          "skillLvl": 5,
-          "interest": 0,
-          "xp": 5800
-        },
-        "build": {
-          "skillLvl": 1,
-          "interest": 0,
-          "xp": 1000
-        },
-        "hunting": {
-          "skillLvl": 6,
-          "interest": 1,
-          "xp": 5833
-        },
-        "diplomat": {
-          "skillLvl": 1,
-          "interest": 1,
-          "xp": 833
-        },
-        "craft": {
-          "skillLvl": 4,
-          "interest": 1,
-          "xp": 3833
-        },
-        "medic": {
-          "skillLvl": 6,
-          "interest": 0,
-          "xp": 7000
-        }
-      },
-      "social": [],
-      "tasks": []
-    },
-    "Jareb": {
-      "name": "Jareb",
-      "gender": "M",
-      "skill": {
-        "farming": {
-          "skillLvl": 6,
-          "interest": 0,
-          "xp": 7000
-        },
-        "extract": {
-          "skillLvl": 1,
-          "interest": 0,
-          "xp": 1000
-        },
-        "build": {
-          "skillLvl": 6,
-          "interest": 0,
-          "xp": 7000
-        },
-        "hunting": {
-          "skillLvl": 16,
-          "interest": 0,
-          "xp": 19000
-        },
-        "diplomat": {
-          "skillLvl": 12,
-          "interest": 0,
-          "xp": 14200
-        },
-        "craft": {
-          "skillLvl": 6,
-          "interest": 0,
-          "xp": 7000
-        },
-        "medic": {
           "skillLvl": 5,
           "interest": 2,
           "xp": 3866
+        },
+        "hunting": {
+          "skillLvl": 7,
+          "interest": 2,
+          "xp": 5466
+        },
+        "diplomat": {
+          "skillLvl": 6,
+          "interest": 0,
+          "xp": 7000
+        },
+        "craft": {
+          "skillLvl": 5,
+          "interest": 0,
+          "xp": 5800
+        },
+        "medic": {
+          "skillLvl": 11,
+          "interest": 0,
+          "xp": 13000
         }
       },
       "social": [],
       "tasks": []
     },
-    "Beitris": {
-      "name": "Beitris",
+    "Catherin": {
+      "name": "Catherin",
       "gender": "F",
       "skill": {
         "farming": {
@@ -182,34 +53,77 @@
           "xp": 7000
         },
         "extract": {
+          "skillLvl": 7,
+          "interest": 0,
+          "xp": 8200
+        },
+        "build": {
+          "skillLvl": 7,
+          "interest": 0,
+          "xp": 8200
+        },
+        "hunting": {
+          "skillLvl": 5,
+          "interest": 0,
+          "xp": 5800
+        },
+        "diplomat": {
+          "skillLvl": 7,
+          "interest": 1,
+          "xp": 6833
+        },
+        "craft": {
+          "skillLvl": 5,
+          "interest": 0,
+          "xp": 5800
+        },
+        "medic": {
+          "skillLvl": 6,
+          "interest": 1,
+          "xp": 5833
+        }
+      },
+      "social": [],
+      "tasks": []
+    },
+    "Morey": {
+      "name": "Morey",
+      "gender": "M",
+      "skill": {
+        "farming": {
+          "skillLvl": 6,
+          "interest": 0,
+          "xp": 7000
+        },
+        "extract": {
           "skillLvl": 6,
           "interest": 0,
           "xp": 7000
         },
         "build": {
-          "skillLvl": 12,
-          "interest": 1,
-          "xp": 11833
-        },
-        "hunting": {
-          "skillLvl": 7,
-          "interest": 1,
-          "xp": 6833
-        },
-        "diplomat": {
           "skillLvl": 7,
           "interest": 0,
           "xp": 8200
         },
-        "craft": {
+        "hunting": {
           "skillLvl": 1,
+          "interest": 0,
+          "xp": 1000
+        },
+        "diplomat": {
+          "skillLvl": 7,
           "interest": 1,
-          "xp": 833
+          "xp": 6833
+        },
+        "craft": {
+          "skillLvl": 9,
+          "interest": 0,
+          "xp": 10600
         },
         "medic": {
-          "skillLvl": 13,
+          "skillLvl": 7,
           "interest": 0,
-          "xp": 15400
+          "xp": 8200
         }
       },
       "social": [],
@@ -220,7 +134,7 @@
   "storage": {},
   "research": {},
   "planet": {
-    "name": "Qelia",
+    "name": "Fothea",
     "tier": "dev",
     "ressources": {
       "Fer": 48000,
@@ -233,7 +147,6 @@
       "Titane": 6400
     },
     "faune": [
-      "Golem de Bronze",
       "Guenaudes",
       "Donican",
       "Horupine"

@@ -25,7 +25,7 @@ class Menu {
     // Ajout les donné pour chaque catégorie
     for(const skill of skills){
 
-      skillSTR +=`\n\t${skill}: ${colon.skill[skill].skill}`
+      skillSTR +=`\n\t${skill}: ${colon.skill[skill].skillLvl}`
     }
     for(const relation of colon.social){
       if(!relation) return

@@ -1,0 +1,29 @@
+{
+  "class": "",
+  "numberOrbit": "",
+  "planet": [
+    {
+      "type": "",
+      "distance": "",
+      "orbit": "",
+      "moons": [
+        {
+          "type": ""
+        }
+      ],
+      "ring": []
+    }
+  ],
+  "asteroid": [
+    {
+      "type": "",
+      "distance": "",
+      "orbit": ""
+    }
+  ],
+  "stars": [
+    {
+      "type": ""
+    }
+  ]
+}

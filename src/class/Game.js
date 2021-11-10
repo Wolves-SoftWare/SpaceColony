@@ -21,11 +21,11 @@ class Game extends EventEmitter{
 
   async startGame(){ // lanceur
     this.saveSystem.makeSave(3) // genere 3 colon
-    /*this.events = await EventLoader(); // charge les event
+    this.events = await EventLoader(); // charge les event
     [...this.events.values()].map((event) => {
       this.on(event.name, (...args) => event.func(this, ...args));
-    });*
-    this.emit('startGame',this) // lance le jeu*/
+    });
+    this.emit('startGame',this) // lance le jeu
   }
 
   /**
