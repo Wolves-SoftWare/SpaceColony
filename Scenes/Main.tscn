@@ -6,7 +6,7 @@
 [ext_resource path="res://Assets/Textures/Buttons/Base.tres" type="StyleBox" id=4]
 [ext_resource path="res://Assets/Textures/Buttons/Click.tres" type="StyleBox" id=5]
 [ext_resource path="res://Assets/Fonts/Dynamics/Small.tres" type="DynamicFont" id=6]
-[ext_resource path="res://Script/MainMenu/Main.cs" type="Script" id=7]
+[ext_resource path="res://Game/Main.cs" type="Script" id=7]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 7 )
@@ -69,4 +69,4 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="Control/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Control/Button" to="." method="StartPressed"]
