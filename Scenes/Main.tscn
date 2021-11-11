@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/Fonts/Dynamics/Title.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Assets/Fonts/Dynamics/Medium.tres" type="DynamicFont" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Assets/Textures/Buttons/Click.tres" type="StyleBox" id=5]
 [ext_resource path="res://Assets/Fonts/Dynamics/Small.tres" type="DynamicFont" id=6]
 [ext_resource path="res://Game/Main.cs" type="Script" id=7]
+[ext_resource path="res://wallpaper.png" type="Texture" id=8]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 7 )
@@ -18,6 +19,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Wallpaper" type="Sprite" parent="Control"]
+position = Vector2( 512.5, 296.25 )
+scale = Vector2( 2.27455, 2.24905 )
+texture = ExtResource( 8 )
+
 [node name="Label" type="Label" parent="Control"]
 anchor_right = 1.0
 margin_left = 332.0
@@ -27,7 +33,7 @@ margin_bottom = 76.0
 custom_fonts/font = ExtResource( 1 )
 text = "Space Colony"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="Button" type="Button" parent="Control"]
