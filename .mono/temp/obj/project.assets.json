@@ -411,7 +411,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
-      "Microsoft.NETFramework.ReferenceAssemblies >= 1.0.0"
+      "Microsoft.NETFramework.ReferenceAssemblies >= 1.0.0",
+      "Microsoft.NETFramework.ReferenceAssemblies.net472 >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -458,6 +459,12 @@
             "target": "Package",
             "version": "[1.0.0, )",
             "autoReferenced": true
+          },
+          "Microsoft.NETFramework.ReferenceAssemblies.net472": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[1.0.0, )"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
