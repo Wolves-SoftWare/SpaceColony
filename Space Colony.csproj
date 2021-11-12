@@ -4,12 +4,10 @@
     <RootNamespace>SpaceColony</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="GodotSharp" Version="3.2.3" />
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net472" Version="1.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Script\MainMenu" />
   </ItemGroup>
 </Project>
