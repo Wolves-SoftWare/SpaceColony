@@ -16,7 +16,14 @@ public class Main : Godot.Node
 	{
 		GetTree().ChangeScene("res://src/Scenes/Game.tscn");
 	}
+	private void OptionPressed()
+	{
+		GetTree().ChangeScene("res://src/Scenes/Option.tscn");
+	}
 }
+
+
+
 
 
 
