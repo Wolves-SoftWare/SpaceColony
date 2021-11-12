@@ -1,13 +1,9 @@
 using Godot;
 using System;
 
-public class Option : Node2D
+public class Option : Godot.Node
 {
-	// Declare member variables here. Examples:
-	// private int a = 2;
-	// private string b = "text";
-
-	// Called when the node enters the scene tree for the first time.
+	private int colonCount;
 	public override void _Ready()
 	{
 		
@@ -15,11 +11,13 @@ public class Option : Node2D
 
 	private void Backpressed()
 	{
-		GetTree().ChangeScene("res://src/Scenes/Game.tscn");
+		GetTree().ChangeScene("res://src/Scenes/Main.tscn");
 	}
 	private void Textchanged(String text)
 	{
-		GD.Print(text);
+
+		var label = (Label)GetNode("NaN");
+		GD.Print(label);
 	}
 }
 
