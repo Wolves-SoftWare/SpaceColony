@@ -19,11 +19,13 @@ config/icon="res://src/Assets/Pictures/5195884.png"
 
 window/size/width=1600
 window/size/height=900
+window/stretch/mode="viewport"
 
 [global]
 
 font=false
 resolution=false
+ratio=false
 
 [physics]
 

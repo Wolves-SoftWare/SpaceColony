@@ -1,67 +1,29 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://src/Assets/theme/TitleLabel.tres" type="Theme" id=1]
-[ext_resource path="res://src/Assets/theme/InputText.tres" type="Theme" id=2]
-[ext_resource path="res://src/Assets/theme/MeduimLabel.tres" type="Theme" id=3]
-[ext_resource path="res://src/Assets/Pictures/background.png" type="Texture" id=4]
-[ext_resource path="res://src/Assets/theme/Button.tres" type="Theme" id=5]
-[ext_resource path="res://src/Script/Game/Option.cs" type="Script" id=6]
-[ext_resource path="res://src/Assets/Textures/Buttons/Base.tres" type="StyleBox" id=7]
+[ext_resource path="res://src/Scenes/Scrapped/Options/OptionsList.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Scenes/Scrapped/Options/Button.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Scenes/Scrapped/Options/Title.tscn" type="PackedScene" id=3]
 
-[node name="Node2D" type="Node2D"]
-script = ExtResource( 6 )
-
-[node name="TextureRect" type="TextureRect" parent="."]
-margin_right = 1600.0
-margin_bottom = 900.0
-texture = ExtResource( 4 )
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="."]
-margin_left = 693.0
-margin_top = 9.0
-margin_right = 916.0
-margin_bottom = 103.0
-theme = ExtResource( 1 )
-text = "OPTION"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Button" parent="." instance=ExtResource( 2 )]
+margin_left = 3.0
+margin_top = 864.0
+margin_right = 82.0
+margin_bottom = 899.0
 
-[node name="Label2" type="Label" parent="."]
-margin_left = 105.0
-margin_top = 144.0
-margin_right = 320.0
-margin_bottom = 184.0
-theme = ExtResource( 3 )
-text = "Nombre de colons"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="OptionsList" parent="." instance=ExtResource( 1 )]
+margin_left = 664.0
+margin_top = 207.0
+margin_right = 931.0
+margin_bottom = 247.0
 
-[node name="LineEdit" type="LineEdit" parent="."]
-margin_left = 351.0
-margin_top = 145.0
-margin_right = 548.0
-margin_bottom = 187.0
-theme = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button" type="Button" parent="."]
-margin_left = 11.0
-margin_top = 823.0
-margin_right = 139.0
-margin_bottom = 888.0
-theme = ExtResource( 5 )
-custom_styles/normal = ExtResource( 7 )
-text = "Retour"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[connection signal="text_changed" from="LineEdit" to="." method="Textchanged"]
-[connection signal="pressed" from="Button" to="." method="Backpressed"]
+[node name="VBoxContainer" parent="." instance=ExtResource( 3 )]
+margin_left = 678.0
+margin_right = 901.0
+margin_bottom = 78.0
