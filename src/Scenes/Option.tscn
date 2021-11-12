@@ -1,0 +1,11 @@
+[gd_scene format=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+margin_right = 184.0
+margin_bottom = 130.0
+text = "OPTION"
+__meta__ = {
+"_edit_use_anchors_": false
+}

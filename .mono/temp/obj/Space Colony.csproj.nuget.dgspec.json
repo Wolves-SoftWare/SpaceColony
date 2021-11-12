@@ -1,29 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "/Users/floriandelrieu/OneDrive/Logiciels et Jeux/SpaceColony/Space Colony.csproj": {}
+    "C:\\Users\\zecha\\OneDrive\\Bureau\\SpaceColony\\Space Colony.csproj": {}
   },
   "projects": {
-    "/Users/floriandelrieu/OneDrive/Logiciels et Jeux/SpaceColony/Space Colony.csproj": {
+    "C:\\Users\\zecha\\OneDrive\\Bureau\\SpaceColony\\Space Colony.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/floriandelrieu/OneDrive/Logiciels et Jeux/SpaceColony/Space Colony.csproj",
+        "projectUniqueName": "C:\\Users\\zecha\\OneDrive\\Bureau\\SpaceColony\\Space Colony.csproj",
         "projectName": "Space Colony",
-        "projectPath": "/Users/floriandelrieu/OneDrive/Logiciels et Jeux/SpaceColony/Space Colony.csproj",
-        "packagesPath": "/Users/floriandelrieu/.nuget/packages/",
-        "outputPath": "/Users/floriandelrieu/OneDrive/Logiciels et Jeux/SpaceColony/.mono/temp/obj/",
+        "projectPath": "C:\\Users\\zecha\\OneDrive\\Bureau\\SpaceColony\\Space Colony.csproj",
+        "packagesPath": "C:\\Users\\zecha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zecha\\OneDrive\\Bureau\\SpaceColony\\.mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/floriandelrieu/.config/NuGet/NuGet.Config"
+          "C:\\Users\\zecha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net472"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net472": {
+            "targetAlias": "net472",
             "projectReferences": {}
           }
         },
@@ -35,7 +38,14 @@
       },
       "frameworks": {
         "net472": {
+          "targetAlias": "net472",
           "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0, )",
+              "autoReferenced": true
+            },
             "Microsoft.NETFramework.ReferenceAssemblies.net472": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -43,7 +53,7 @@
               "version": "[1.0.0, )"
             }
           },
-          "runtimeIdentifierGraphPath": "/Library/Frameworks/Mono.framework/Versions/6.12.0/lib/mono/msbuild/Current/bin/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -11,13 +11,19 @@ config_version=4
 [application]
 
 config/name="Space Colony"
-run/main_scene="res://Scenes/Main.tscn"
+run/main_scene="res://src/Scenes/Main.tscn"
 config/use_hidden_project_data_directory=false
-config/icon="res://SpaceColony.png"
+config/icon="res://src/Assets/Pictures/5195884.png"
+
+[display]
+
+window/size/width=1600
+window/size/height=900
 
 [global]
 
 font=false
+resolution=false
 
 [physics]
 
