@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "00tEbIfW22eBhJIkKFS3LnU1rvIwNfuFymSwRPcFu/5frOQTWZWP4torpHM/4QlkjrBBGdIzDX/oz2O0ybvmWQ==",
+  "dgSpecHash": "+HHK4sWn16AVcU0+zB7jpUOKa0EeTDPiPz3xhKFjqQ4cNcLQBdTslqFyP81IQEj8135GD0nQBkQTFX31Bpyy3A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\zecha\\OneDrive\\Bureau\\SpaceColony\\Space Colony.csproj",
+  "projectFilePath": "/Users/floriandelrieu/OneDrive/Logiciels et Jeux/SpaceColony/Space Colony.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\zecha\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.0\\microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
-    "C:\\Users\\zecha\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net472\\1.0.0\\microsoft.netframework.referenceassemblies.net472.1.0.0.nupkg.sha512"
+    "/Users/floriandelrieu/.nuget/packages/microsoft.netframework.referenceassemblies.net472/1.0.0/microsoft.netframework.referenceassemblies.net472.1.0.0.nupkg.sha512"
   ],
   "logs": []
 }
