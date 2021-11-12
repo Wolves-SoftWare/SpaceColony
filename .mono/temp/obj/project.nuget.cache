@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "00tEbIfW22eBhJIkKFS3LnU1rvIwNfuFymSwRPcFu/5frOQTWZWP4torpHM/4QlkjrBBGdIzDX/oz2O0ybvmWQ==",
+  "dgSpecHash": "5diYmM/HGoNSFNpiNdAc7q9qj8B381RbFQ+CSqzuacD1GSR+02HQWx/rkzHAH4ABWM2kV3EJrkA+n6v4UepQlw==",
   "success": true,
   "projectFilePath": "C:\\Users\\zecha\\OneDrive\\Bureau\\SpaceColony\\Space Colony.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\zecha\\.nuget\\packages\\godotsharp\\3.2.3\\godotsharp.3.2.3.nupkg.sha512",
     "C:\\Users\\zecha\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.0\\microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
     "C:\\Users\\zecha\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net472\\1.0.0\\microsoft.netframework.referenceassemblies.net472.1.0.0.nupkg.sha512"
   ],

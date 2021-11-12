@@ -40,6 +40,10 @@
         "net472": {
           "targetAlias": "net472",
           "dependencies": {
+            "GodotSharp": {
+              "target": "Package",
+              "version": "[3.2.3, )"
+            },
             "Microsoft.NETFramework.ReferenceAssemblies": {
               "suppressParent": "All",
               "target": "Package",

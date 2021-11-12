@@ -2,6 +2,17 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.7.2": {
+      "GodotSharp/3.2.3": {
+        "type": "package",
+        "compile": {
+          "lib/GodotSharp.dll": {},
+          "lib/GodotSharpEditor.dll": {}
+        },
+        "runtime": {
+          "lib/GodotSharp.dll": {},
+          "lib/GodotSharpEditor.dll": {}
+        }
+      },
       "Microsoft.NETFramework.ReferenceAssemblies/1.0.0": {
         "type": "package",
         "dependencies": {
@@ -17,6 +28,23 @@
     }
   },
   "libraries": {
+    "GodotSharp/3.2.3": {
+      "sha512": "k0M2yG62nkpGKj48hGAS+C7tiH5Hp4Q3udmY1IaNXXOxsMCA4n+1w8Ab/fOawGUjZJjA47YBG9N//g9Kcx80Fw==",
+      "type": "package",
+      "path": "godotsharp/3.2.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "godotsharp.3.2.3.nupkg.sha512",
+        "godotsharp.nuspec",
+        "lib/GodotSharp.dll",
+        "lib/GodotSharp.pdb",
+        "lib/GodotSharp.xml",
+        "lib/GodotSharpEditor.dll",
+        "lib/GodotSharpEditor.pdb",
+        "lib/GodotSharpEditor.xml"
+      ]
+    },
     "Microsoft.NETFramework.ReferenceAssemblies/1.0.0": {
       "sha512": "7D2TMufjGiowmt0E941kVoTIS+GTNzaPopuzM1/1LSaJAdJdBrVP0SkZW7AgDd0a2U1DjsIeaKG1wxGVBNLDMw==",
       "type": "package",
@@ -411,6 +439,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
+      "GodotSharp >= 3.2.3",
       "Microsoft.NETFramework.ReferenceAssemblies >= 1.0.0",
       "Microsoft.NETFramework.ReferenceAssemblies.net472 >= 1.0.0"
     ]
@@ -454,6 +483,10 @@
       "net472": {
         "targetAlias": "net472",
         "dependencies": {
+          "GodotSharp": {
+            "target": "Package",
+            "version": "[3.2.3, )"
+          },
           "Microsoft.NETFramework.ReferenceAssemblies": {
             "suppressParent": "All",
             "target": "Package",
