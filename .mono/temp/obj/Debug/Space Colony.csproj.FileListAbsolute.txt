@@ -15,3 +15,5 @@ C:\Users\zecha\OneDrive\Bureau\SpaceColony\.mono\temp\obj\Debug\Space Colony.Ass
 C:\Users\zecha\OneDrive\Bureau\SpaceColony\.mono\temp\obj\Debug\Space Colony.csproj.CoreCompileInputs.cache
 C:\Users\zecha\OneDrive\Bureau\SpaceColony\.mono\temp\obj\Debug\Space Colony.dll
 C:\Users\zecha\OneDrive\Bureau\SpaceColony\.mono\temp\obj\Debug\Space Colony.pdb
+C:\Users\zecha\OneDrive\Bureau\SpaceColony\.mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\zecha\OneDrive\Bureau\SpaceColony\.mono\temp\bin\Debug\GodotSharpEditor.dll
