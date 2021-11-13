@@ -1,10 +1,7 @@
 using Godot;
-using System.Collections;
-using SpaceColony.Script.Utils;
-using SpaceColony.Script.Modules.Colonist;
-using SpaceColony.Script.Class;
+using System;
 
-public class game : Node
+public class ReturnButton : Control
 {
 	// Declare member variables here. Examples:
 	// private int a = 2;
@@ -14,22 +11,17 @@ public class game : Node
 	public override void _Ready()
 	{
 		
-		Generator.generate(5);
-		
 	}
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(float delta)
-	{
-		
-	}
-	private void BackPressed()
+//  public override void _Process(float delta)
+//  {
+//      
+//  }
+	private void ReturnMainMenuPressed()
 	{
 		GetTree().ChangeScene("res://src/Scenes/Main.tscn");
-		GameOptions gameOption = new GameOptions();
-		GD.Print(gameOption.colonCount);
 	}
-	
 }
 
 

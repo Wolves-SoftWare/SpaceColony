@@ -20,9 +20,16 @@ public class Buttons : Godot.Node
 	private void OptionsPressed()
 	{
 		GetTree().ChangeScene("res://src/Scenes/Option.tscn");
+
 	}
 
 }
+
+
+
+
+
+
 
 
 

@@ -9,17 +9,20 @@ public class Option : Godot.Node
 		
 	}
 
-	private void Backpressed()
+	private void BackPressed()
 	{
 		GetTree().ChangeScene("res://src/Scenes/Main.tscn");
+
 	}
 	private void Textchanged(String text)
 	{
-
-		var label = (Label)GetNode("NaN");
-		GD.Print(label);
+		
+		
 	}
 }
+
+
+
 
 
 

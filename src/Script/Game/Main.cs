@@ -24,12 +24,6 @@ public class Main : Godot.Node
 
 	}
 
-	private void OptionsPressed()
-	{
-		
-
-	}
-
 }
 
 

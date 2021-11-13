@@ -11,6 +11,13 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="src\Script\Game\Buttons" />
+    <Folder Include="src\Scenes\Scrapped" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\Componants\MainMenu\ButtonsMainMenu.tscn" />
+    <Content Include="src\Componants\MainMenu\Credits.tscn" />
+    <Content Include="src\Componants\MainMenu\TitleGame.tscn" />
+    <Content Include="src\Componants\Options\OptionsList.tscn" />
+    <Content Include="src\Componants\Options\TitleOption.tscn" />
   </ItemGroup>
 </Project>

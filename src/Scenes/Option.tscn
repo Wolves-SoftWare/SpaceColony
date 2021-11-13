@@ -1,29 +1,52 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://src/Scenes/Scrapped/Options/OptionsList.tscn" type="PackedScene" id=1]
-[ext_resource path="res://src/Scenes/Scrapped/Options/Button.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/Scenes/Scrapped/Options/Title.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Componants/Options/OptionsList.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Componants/ScenePart/Button/Retour/MainMenuButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Componants/Options/TitleOption.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Assets/Pictures/background.png" type="Texture" id=4]
+[ext_resource path="res://src/Script/Game/Option.cs" type="Script" id=6]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" parent="." instance=ExtResource( 2 )]
-margin_left = 3.0
-margin_top = 864.0
-margin_right = 82.0
-margin_bottom = 899.0
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1600.0
+margin_bottom = 900.0
+texture = ExtResource( 4 )
 
-[node name="OptionsList" parent="." instance=ExtResource( 1 )]
-margin_left = 664.0
-margin_top = 207.0
-margin_right = 931.0
-margin_bottom = 247.0
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 112.0
+margin_top = 111.0
+margin_right = 1488.0
+margin_bottom = 845.0
+color = Color( 0.0705882, 0.0705882, 0.0705882, 0.423529 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect"]
+margin_left = 25.0
+margin_top = 25.0
+margin_right = 25.0
+margin_bottom = 25.0
+color = Color( 0.0705882, 0.0705882, 0.0705882, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionList" parent="ColorRect/ColorRect2" instance=ExtResource( 1 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 0.0
+margin_bottom = 38.0
 
 [node name="VBoxContainer" parent="." instance=ExtResource( 3 )]
-margin_left = 678.0
-margin_right = 901.0
-margin_bottom = 78.0
+
+[node name="Control" parent="." instance=ExtResource( 2 )]
