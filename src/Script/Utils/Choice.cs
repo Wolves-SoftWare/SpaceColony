@@ -2,12 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Godot;
+
 namespace SpaceColony.Script.Utils
 
 {
 	public class Choice
 	{
-		public static System.Object Make(ArrayList list,ArrayList weights)
+		public static int Make(ArrayList list,ArrayList weights)
 		{
 			ArrayList newList = new ArrayList();
 			ArrayList newWeights = new ArrayList();
@@ -30,7 +32,11 @@ namespace SpaceColony.Script.Utils
 				}
 			}
 			Random random = new Random();
-			return chance[random.Next(0, chance.Count)];
+			var val = chance[random.Next(0, chance.Count)];
+
+			
+			
+			return Convert.ToInt32(val);;
 		}
 	}
 }
