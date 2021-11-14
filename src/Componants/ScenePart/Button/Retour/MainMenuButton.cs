@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class ReturnButton : Control
+public class MainMenuButton : Control
 {
 	// Declare member variables here. Examples:
 	// private int a = 2;
@@ -12,17 +12,16 @@ public class ReturnButton : Control
 	{
 		
 	}
-
-//  // Called every frame. 'delta' is the elapsed time since the previous frame.
-//  public override void _Process(float delta)
-//  {
-//      
-//  }
-	private void ReturnMainMenuPressed()
+	
+	private void BackToMenuPressed()
 	{
 		GetTree().ChangeScene("res://src/Scenes/Main.tscn");
+
 	}
 }
+
+
+
 
 
 
