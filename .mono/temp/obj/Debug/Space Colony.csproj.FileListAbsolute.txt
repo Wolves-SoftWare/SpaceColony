@@ -17,3 +17,16 @@ C:\Users\zecha\OneDrive\Bureau\SpaceColony\.mono\temp\obj\Debug\Space Colony.dll
 C:\Users\zecha\OneDrive\Bureau\SpaceColony\.mono\temp\obj\Debug\Space Colony.pdb
 C:\Users\zecha\OneDrive\Bureau\SpaceColony\.mono\temp\bin\Debug\GodotSharp.dll
 C:\Users\zecha\OneDrive\Bureau\SpaceColony\.mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\zecha\OneDrive\Bureau\SpaceColony\Engine\.mono\temp\bin\Debug\Space Colony.dll
+C:\Users\zecha\OneDrive\Bureau\SpaceColony\Engine\.mono\temp\bin\Debug\Space Colony.pdb
+C:\Users\zecha\OneDrive\Bureau\SpaceColony\Engine\.mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\zecha\OneDrive\Bureau\SpaceColony\Engine\.mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\zecha\OneDrive\Bureau\SpaceColony\Engine\.mono\temp\obj\Debug\Space Colony.csproj.AssemblyReference.cache
+C:\Users\zecha\OneDrive\Bureau\SpaceColony\Engine\.mono\temp\obj\Debug\Space Colony.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zecha\OneDrive\Bureau\SpaceColony\Engine\.mono\temp\obj\Debug\Space Colony.AssemblyInfoInputs.cache
+C:\Users\zecha\OneDrive\Bureau\SpaceColony\Engine\.mono\temp\obj\Debug\Space Colony.AssemblyInfo.cs
+C:\Users\zecha\OneDrive\Bureau\SpaceColony\Engine\.mono\temp\obj\Debug\Space Colony.csproj.CoreCompileInputs.cache
+C:\Users\zecha\OneDrive\Bureau\SpaceColony\Engine\.mono\temp\obj\Debug\Space Colony.dll
+C:\Users\zecha\OneDrive\Bureau\SpaceColony\Engine\.mono\temp\obj\Debug\Space Colony.pdb
+C:\Users\zecha\OneDrive\Bureau\SpaceColony\Engine\.mono\temp\bin\Debug\Json.Net.dll
+C:\Users\zecha\OneDrive\Bureau\SpaceColony\Engine\.mono\temp\bin\Debug\Newtonsoft.Json.dll

@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "5diYmM/HGoNSFNpiNdAc7q9qj8B381RbFQ+CSqzuacD1GSR+02HQWx/rkzHAH4ABWM2kV3EJrkA+n6v4UepQlw==",
+  "dgSpecHash": "/r+c1Zm3h5dIs823UQYAZRH5kvwPUSE0/489dWw/RS8axzuLm5Rc99HXDftS3TFm+coNVQoHXf0lm56ndBnakw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\zecha\\OneDrive\\Bureau\\SpaceColony\\Space Colony.csproj",
+  "projectFilePath": "C:\\Users\\zecha\\OneDrive\\Bureau\\SpaceColony\\Engine\\Space Colony.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\zecha\\.nuget\\packages\\godotsharp\\3.2.3\\godotsharp.3.2.3.nupkg.sha512",
+    "C:\\Users\\zecha\\.nuget\\packages\\json.net\\1.0.33\\json.net.1.0.33.nupkg.sha512",
     "C:\\Users\\zecha\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.0\\microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
-    "C:\\Users\\zecha\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net472\\1.0.0\\microsoft.netframework.referenceassemblies.net472.1.0.0.nupkg.sha512"
+    "C:\\Users\\zecha\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net472\\1.0.0\\microsoft.netframework.referenceassemblies.net472.1.0.0.nupkg.sha512",
+    "C:\\Users\\zecha\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }
