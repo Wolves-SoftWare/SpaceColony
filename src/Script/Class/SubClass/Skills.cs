@@ -17,7 +17,7 @@ namespace SpaceColony.Script.Class.SubClass
             {7, 7, 7, 8, 10, 15, 12, 12, 9, 7, 6, 5, 4, 4, 3, 2, 2, 1, 1};
 
         private static ArrayList listInterrest = new ArrayList() {0, 1, 2};
-        private static ArrayList weightsInterrest = new ArrayList() {20, 7, 3};
+        private static ArrayList weightsInterrest = new ArrayList() {17, 9, 3};
         public SkillData Farming = new SkillData(){Point = Choice.Make(listPoint, weightsPoint), Interrest = Choice.Make(listInterrest, weightsInterrest)};
         public SkillData Extract = new SkillData(){Point = Choice.Make(listPoint, weightsPoint), Interrest = Choice.Make(listInterrest, weightsInterrest)};
         public SkillData Build = new SkillData(){Point = Choice.Make(listPoint, weightsPoint), Interrest = Choice.Make(listInterrest, weightsInterrest)};
