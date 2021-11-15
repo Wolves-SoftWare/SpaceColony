@@ -9,8 +9,8 @@ namespace SpaceColony.Script.Class
     {
         public string Name { get; set; }
         public string Gender { get; set; }
-        public Skills Skill { get; set; }
-        public Tasks Tasks { get; set; }
+        public List<SkillData> Skill { get; set; }
+        public List<Tasks>  Tasks { get; set; }
         public List<Social> Social { get; set; }
 
     }

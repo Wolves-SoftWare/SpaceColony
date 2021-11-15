@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Colons>
+  <Colon Name="Lemuel">
+    <Gender>Male</Gender>
+    <Skills>
+      <Skill Name="Farming">
+        <Point>6</Point>
+        <Interrest>1</Interrest>
+        <Xp>5833</Xp>
+      </Skill>
+      <Skill Name="Extract">
+        <Point>6</Point>
+        <Interrest>0</Interrest>
+        <Xp>7000</Xp>
+      </Skill>
+      <Skill Name="Build">
+        <Point>2</Point>
+        <Interrest>0</Interrest>
+        <Xp>2200</Xp>
+      </Skill>
+      <Skill Name="Hunting">
+        <Point>7</Point>
+        <Interrest>0</Interrest>
+        <Xp>8200</Xp>
+      </Skill>
+      <Skill Name="Diplomat">
+        <Point>6</Point>
+        <Interrest>0</Interrest>
+        <Xp>7000</Xp>
+      </Skill>
+      <Skill Name="Craft">
+        <Point>5</Point>
+        <Interrest>0</Interrest>
+        <Xp>5800</Xp>
+      </Skill>
+      <Skill Name="Medic">
+        <Point>1</Point>
+        <Interrest>0</Interrest>
+        <Xp>1000</Xp>
+      </Skill>
+    </Skills>
+    <Socials />
+    <Tasks />
+  </Colon>
+</Colons>
