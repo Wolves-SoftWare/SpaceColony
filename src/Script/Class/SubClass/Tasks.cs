@@ -2,6 +2,6 @@
 {
     public class Tasks
     {
-        
+        public string Name { get; set; }
     }
 }
