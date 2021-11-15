@@ -1,0 +1,26 @@
+<Project Sdk="Godot.NET.Sdk/3.3.0">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <RootNamespace>SpaceColony</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="GodotSharp" Version="3.2.3" />
+    <PackageReference Include="Json.Net" Version="1.0.33" />
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net472" Version="1.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\Scenes" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\save\game.json" />
+    <Content Include="src\Componants\MainMenu\ButtonsMainMenu.tscn" />
+    <Content Include="src\Componants\MainMenu\Credits.tscn" />
+    <Content Include="src\Componants\MainMenu\TitleGame.tscn" />
+    <Content Include="src\Componants\Options\OptionsList.tscn" />
+    <Content Include="src\Componants\Options\TitleOption.tscn" />
+  </ItemGroup>
+</Project>
