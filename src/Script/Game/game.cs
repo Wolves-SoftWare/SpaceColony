@@ -6,14 +6,10 @@ using SpaceColony.Script.Class;
 
 public class game : Node
 {
-	// Declare member variables here. Examples:
-	// private int a = 2;
-	// private string b = "text";
-
-	// Called when the node enters the scene tree for the first time.
+	public GameOptions options = new GameOptions();
 	public override void _Ready()
 	{
-		Generator.Generate(1);
+		Generator.Generate(options.getColonCount());
 	}
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.

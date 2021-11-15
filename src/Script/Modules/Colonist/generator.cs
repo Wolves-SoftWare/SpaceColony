@@ -33,7 +33,7 @@ namespace SpaceColony.Script.Modules.Colonist
 				List<string> genderList = new List<string>() {"Male", "Female"};
 				Random random = new Random();
 				var names = SpaceColonyJSON.ReadFromJsonFile<DataNamesModel>(AppDomain.CurrentDomain.BaseDirectory +
-				                                                             "/src/Assets/JSON/names.json");
+																			 "/src/Assets/JSON/names.json");
 				for (int i = 0; i < number; i++)
 				{
 					string gender = genderList[random.Next(genderList.Count)];
