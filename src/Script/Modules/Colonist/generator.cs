@@ -37,100 +37,52 @@ namespace SpaceColony.Script.Modules.Colonist
 				for (int i = 0; i < number; i++)
 				{
 					string gender = genderList[random.Next(genderList.Count)];
-					if (gender == "Male")
+					colonist.Add(new Colon()
 					{
-						colonist.Add(new Colon()
+						Name = names.Male[random.Next(names.Male.Count)],
+						Gender = gender == "Male" ? "Male" : "Female",
+						Skill = new List<SkillData>()
 						{
-							Name = names.Male[random.Next(names.Male.Count)],
-							Gender = gender,
-							Skill = new List<SkillData>()
+							new SkillData()
 							{
-								new SkillData()
-								{
-									Name = "Farming", Point = Choice.Make(listPoint, weightsPoint),
-									Interrest = Choice.Make(listInterrest, weightsInterrest)
-								},
-								new SkillData()
-								{
-									Name = "Extract", Point = Choice.Make(listPoint, weightsPoint),
-									Interrest = Choice.Make(listInterrest, weightsInterrest)
-								},
-								new SkillData()
-								{
-									Name = "Build", Point = Choice.Make(listPoint, weightsPoint),
-									Interrest = Choice.Make(listInterrest, weightsInterrest)
-								},
-								new SkillData()
-								{
-									Name = "Hunting", Point = Choice.Make(listPoint, weightsPoint),
-									Interrest = Choice.Make(listInterrest, weightsInterrest)
-								},
-								new SkillData()
-								{
-									Name = "Diplomat", Point = Choice.Make(listPoint, weightsPoint),
-									Interrest = Choice.Make(listInterrest, weightsInterrest)
-								},
-								new SkillData()
-								{
-									Name = "Craft", Point = Choice.Make(listPoint, weightsPoint),
-									Interrest = Choice.Make(listInterrest, weightsInterrest)
-								},
-								new SkillData()
-								{
-									Name = "Medic", Point = Choice.Make(listPoint, weightsPoint),
-									Interrest = Choice.Make(listInterrest, weightsInterrest)
-								}
+								Name = "Farming", Point = Choice.Make(listPoint, weightsPoint),
+								Interrest = Choice.Make(listInterrest, weightsInterrest)
 							},
-							Social = new List<Social>(),
-							Tasks = new List<Tasks>()
-						});
-					}
-					else if (gender == "Female")
-					{
-						colonist.Add(new Colon()
-						{
-							Name = names.Female[random.Next(names.Female.Count)], Gender = gender, Skill =
-								new List<SkillData>()
-								{
-									new SkillData()
-									{
-										Name = "Farming", Point = Choice.Make(listPoint, weightsPoint),
-										Interrest = Choice.Make(listInterrest, weightsInterrest)
-									},
-									new SkillData()
-									{
-										Name = "Extract", Point = Choice.Make(listPoint, weightsPoint),
-										Interrest = Choice.Make(listInterrest, weightsInterrest)
-									},
-									new SkillData()
-									{
-										Name = "Build", Point = Choice.Make(listPoint, weightsPoint),
-										Interrest = Choice.Make(listInterrest, weightsInterrest)
-									},
-									new SkillData()
-									{
-										Name = "Hunting", Point = Choice.Make(listPoint, weightsPoint),
-										Interrest = Choice.Make(listInterrest, weightsInterrest)
-									},
-									new SkillData()
-									{
-										Name = "Diplomat", Point = Choice.Make(listPoint, weightsPoint),
-										Interrest = Choice.Make(listInterrest, weightsInterrest)
-									},
-									new SkillData()
-									{
-										Name = "Craft", Point = Choice.Make(listPoint, weightsPoint),
-										Interrest = Choice.Make(listInterrest, weightsInterrest)
-									},
-									new SkillData()
-									{
-										Name = "Medic", Point = Choice.Make(listPoint, weightsPoint),
-										Interrest = Choice.Make(listInterrest, weightsInterrest)
-									}
-								},
-							Social = new List<Social>(), Tasks = new List<Tasks>()
-						});
-					}
+							new SkillData()
+							{
+								Name = "Extract", Point = Choice.Make(listPoint, weightsPoint),
+								Interrest = Choice.Make(listInterrest, weightsInterrest)
+							},
+							new SkillData()
+							{
+								Name = "Build", Point = Choice.Make(listPoint, weightsPoint),
+								Interrest = Choice.Make(listInterrest, weightsInterrest)
+							},
+							new SkillData()
+							{
+								Name = "Hunting", Point = Choice.Make(listPoint, weightsPoint),
+								Interrest = Choice.Make(listInterrest, weightsInterrest)
+							},
+							new SkillData()
+							{
+								Name = "Diplomat", Point = Choice.Make(listPoint, weightsPoint),
+								Interrest = Choice.Make(listInterrest, weightsInterrest)
+							},
+							new SkillData()
+							{
+								Name = "Craft", Point = Choice.Make(listPoint, weightsPoint),
+								Interrest = Choice.Make(listInterrest, weightsInterrest)
+							},
+							new SkillData()
+							{
+								Name = "Medic", Point = Choice.Make(listPoint, weightsPoint),
+								Interrest = Choice.Make(listInterrest, weightsInterrest)
+							}
+						},
+						Social = new List<Social>(),
+						Tasks = new List<Tasks>()
+					});
+
 				}
 
 				SpaceColonyJSON.WriteToJsonFile<List<Colon>>(
@@ -173,28 +125,28 @@ namespace SpaceColony.Script.Modules.Colonist
 					select new XElement("Colon",
 						new XAttribute("Name", colon.Name),
 						new XElement("Gender", colon.Gender),
-						new XElement("Skills", 
-						from skill in colon.Skill
-						select new XElement("Skill",
-							new XAttribute("Name", skill.Name),
-							new XElement("Point", skill.Point),
-							new XElement("Interrest", skill.Interrest),
-							new XElement("Xp", skill.Xp)
-						)
+						new XElement("Skills",
+							from skill in colon.Skill
+							select new XElement("Skill",
+								new XAttribute("Name", skill.Name),
+								new XElement("Point", skill.Point),
+								new XElement("Interrest", skill.Interrest),
+								new XElement("Xp", skill.Xp)
+							)
 						),
 						new XElement("Socials",
-						from social in colon.Social
-						select new XElement("Social",
-							new XAttribute("Name", social.Name),
-							new XElement("Point", social.Point),
-							new XElement("RelationFocus", social.RelationFocus)
-						)
+							from social in colon.Social
+							select new XElement("Social",
+								new XAttribute("Name", social.Name),
+								new XElement("Point", social.Point),
+								new XElement("RelationFocus", social.RelationFocus)
+							)
 						),
 						new XElement("Tasks",
-						from task in colon.Tasks
-						select new XElement("Colon",
-							new XAttribute("Name", task.Name)
-						)
+							from task in colon.Tasks
+							select new XElement("Colon",
+								new XAttribute("Name", task.Name)
+							)
 						)
 					));
 
