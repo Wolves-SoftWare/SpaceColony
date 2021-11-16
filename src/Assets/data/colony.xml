@@ -1,42 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Colons>
-  <Colon Name="Lemuel">
+  <Colon Name="Elliott">
     <Gender>Male</Gender>
     <Skills>
       <Skill Name="Farming">
-        <Point>6</Point>
-        <Interrest>1</Interrest>
-        <Xp>5833</Xp>
-      </Skill>
-      <Skill Name="Extract">
-        <Point>6</Point>
-        <Interrest>0</Interrest>
-        <Xp>7000</Xp>
-      </Skill>
-      <Skill Name="Build">
         <Point>2</Point>
         <Interrest>0</Interrest>
         <Xp>2200</Xp>
       </Skill>
-      <Skill Name="Hunting">
-        <Point>7</Point>
+      <Skill Name="Extract">
+        <Point>8</Point>
         <Interrest>0</Interrest>
-        <Xp>8200</Xp>
+        <Xp>9400</Xp>
+      </Skill>
+      <Skill Name="Build">
+        <Point>1</Point>
+        <Interrest>1</Interrest>
+        <Xp>833</Xp>
+      </Skill>
+      <Skill Name="Hunting">
+        <Point>15</Point>
+        <Interrest>0</Interrest>
+        <Xp>17800</Xp>
       </Skill>
       <Skill Name="Diplomat">
-        <Point>6</Point>
+        <Point>17</Point>
         <Interrest>0</Interrest>
-        <Xp>7000</Xp>
+        <Xp>20200</Xp>
       </Skill>
       <Skill Name="Craft">
-        <Point>5</Point>
-        <Interrest>0</Interrest>
-        <Xp>5800</Xp>
+        <Point>10</Point>
+        <Interrest>1</Interrest>
+        <Xp>9833</Xp>
       </Skill>
       <Skill Name="Medic">
-        <Point>1</Point>
+        <Point>11</Point>
         <Interrest>0</Interrest>
-        <Xp>1000</Xp>
+        <Xp>13000</Xp>
       </Skill>
     </Skills>
     <Socials />
