@@ -1,7 +1,7 @@
-﻿namespace SpaceColony.Script.Class
+namespace SpaceColony.Script.Class
 {
-    public class GameOptions
-    {
-        public int colonCount { get; set; }
-    }
+	public class GameOptions
+	{
+		public int colonCount { get; set; }
+	}
 }
