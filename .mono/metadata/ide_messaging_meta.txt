@@ -1,2 +1,2 @@
-﻿61037
-C:/Godot/Godot_v3.4-stable_mono_win64.exe
+﻿50334
+/Applications/Godot_mono.app/Contents/MacOS/Godot

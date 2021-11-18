@@ -22,12 +22,6 @@
           "lib/netstandard2.0/Json.Net.dll": {}
         }
       },
-      "Microsoft.NETFramework.ReferenceAssemblies/1.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.NETFramework.ReferenceAssemblies.net472": "1.0.0"
-        }
-      },
       "Microsoft.NETFramework.ReferenceAssemblies.net472/1.0.0": {
         "type": "package",
         "build": {
@@ -73,17 +67,6 @@
         "json.net.1.0.33.nupkg.sha512",
         "json.net.nuspec",
         "lib/netstandard2.0/Json.Net.dll"
-      ]
-    },
-    "Microsoft.NETFramework.ReferenceAssemblies/1.0.0": {
-      "sha512": "7D2TMufjGiowmt0E941kVoTIS+GTNzaPopuzM1/1LSaJAdJdBrVP0SkZW7AgDd0a2U1DjsIeaKG1wxGVBNLDMw==",
-      "type": "package",
-      "path": "microsoft.netframework.referenceassemblies/1.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
-        "microsoft.netframework.referenceassemblies.nuspec"
       ]
     },
     "Microsoft.NETFramework.ReferenceAssemblies.net472/1.0.0": {
@@ -498,37 +481,33 @@
     ".NETFramework,Version=v4.7.2": [
       "GodotSharp >= 3.2.3",
       "Json.Net >= 1.0.33",
-      "Microsoft.NETFramework.ReferenceAssemblies >= 1.0.0",
       "Microsoft.NETFramework.ReferenceAssemblies.net472 >= 1.0.0",
       "Newtonsoft.Json >= 13.0.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\zecha\\.nuget\\packages\\": {}
+    "/Users/floriandelrieu/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zecha\\OneDrive\\Bureau\\SpaceColony\\Engine\\Space Colony.csproj",
+      "projectUniqueName": "/Users/floriandelrieu/OneDrive/Logiciels et Jeux/SpaceColony/Space Colony.csproj",
       "projectName": "Space Colony",
-      "projectPath": "C:\\Users\\zecha\\OneDrive\\Bureau\\SpaceColony\\Engine\\Space Colony.csproj",
-      "packagesPath": "C:\\Users\\zecha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zecha\\OneDrive\\Bureau\\SpaceColony\\Engine\\.mono\\temp\\obj\\",
+      "projectPath": "/Users/floriandelrieu/OneDrive/Logiciels et Jeux/SpaceColony/Space Colony.csproj",
+      "packagesPath": "/Users/floriandelrieu/.nuget/packages/",
+      "outputPath": "/Users/floriandelrieu/OneDrive/Logiciels et Jeux/SpaceColony/.mono/temp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\zecha\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/floriandelrieu/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net472"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net472": {
-          "targetAlias": "net472",
           "projectReferences": {}
         }
       },
@@ -540,7 +519,6 @@
     },
     "frameworks": {
       "net472": {
-        "targetAlias": "net472",
         "dependencies": {
           "GodotSharp": {
             "target": "Package",
@@ -549,12 +527,6 @@
           "Json.Net": {
             "target": "Package",
             "version": "[1.0.33, )"
-          },
-          "Microsoft.NETFramework.ReferenceAssemblies": {
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "[1.0.0, )",
-            "autoReferenced": true
           },
           "Microsoft.NETFramework.ReferenceAssemblies.net472": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -567,7 +539,7 @@
             "version": "[13.0.1, )"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/Library/Frameworks/Mono.framework/Versions/6.12.0/lib/mono/msbuild/Current/bin/RuntimeIdentifierGraph.json"
       }
     }
   }

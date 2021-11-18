@@ -15,14 +15,11 @@ public class Buttons : Godot.Node
 	private void StartPressed()
 	{
 		GetTree().ChangeScene("res://src/Scenes/Game.tscn");
-
 	}
 	private void OptionsPressed()
 	{
 		GetTree().ChangeScene("res://src/Scenes/Option.tscn");
-
 	}
-
 }
 
 

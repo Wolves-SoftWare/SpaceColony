@@ -1,7 +1,7 @@
-﻿namespace SpaceColony.Script.Class.SubClass
+namespace SpaceColony.Script.Class.SubClass
 {
-    public class Tasks
-    {
-        public string Name { get; set; }
-    }
+	public class Tasks
+	{
+		public string Name { get; set; }
+	}
 }
